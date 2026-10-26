@@ -1,0 +1,1521 @@
+{
+ "batch": "B",
+ "title": "Khusha mountains, home of the Tengu",
+ "generator": "build.py",
+ "blender": "5.2.3 LTS",
+ "units": "1 Blender unit = 1 stud; scene.unit_settings.scale_length = 0.01; Z up; front = -Y",
+ "size_convention": "[x, height (Blender Z), depth (Blender Y)] in studs, from the mesh bounding box",
+ "atlas": {
+  "file": "atlas.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "tile_px": 256,
+  "inset": 0.04,
+  "tiles": {
+   "stone_grey": {
+    "col": 0,
+    "row_from_top": 0,
+    "kind": "stone (soft round facet blotches)",
+    "palette": "rock_grey",
+    "base_rgb": [
+     126,
+     124,
+     118
+    ],
+    "mean_rgb": [
+     127.8,
+     125.5,
+     119.1
+    ]
+   },
+   "stone_warm": {
+    "col": 1,
+    "row_from_top": 0,
+    "kind": "stone (soft round facet blotches)",
+    "palette": "dwarf_stone",
+    "base_rgb": [
+     148,
+     140,
+     128
+    ],
+    "mean_rgb": [
+     152.6,
+     144.2,
+     131.6
+    ]
+   },
+   "moss": {
+    "col": 2,
+    "row_from_top": 0,
+    "kind": "mossy stone (moss clumps over rock grey)",
+    "palette": "moss",
+    "base_rgb": [
+     84,
+     122,
+     60
+    ],
+    "mean_rgb": [
+     99.9,
+     120.5,
+     82.8
+    ]
+   },
+   "plaster": {
+    "col": 3,
+    "row_from_top": 0,
+    "kind": "flat",
+    "palette": "limestone",
+    "base_rgb": [
+     232,
+     228,
+     214
+    ],
+    "mean_rgb": [
+     231.2,
+     227.2,
+     213.3
+    ]
+   },
+   "lacquer": {
+    "col": 0,
+    "row_from_top": 1,
+    "kind": "flat",
+    "palette": "vermilion",
+    "base_rgb": [
+     200,
+     52,
+     38
+    ],
+    "mean_rgb": [
+     199.2,
+     51.4,
+     37.4
+    ]
+   },
+   "iron": {
+    "col": 1,
+    "row_from_top": 1,
+    "kind": "flat",
+    "palette": "dark_iron",
+    "base_rgb": [
+     58,
+     58,
+     64
+    ],
+    "mean_rgb": [
+     57.4,
+     57.4,
+     63.4
+    ]
+   },
+   "roof_tile": {
+    "col": 2,
+    "row_from_top": 1,
+    "kind": "roof tiles (kawara courses + round-tile columns)",
+    "palette": "dark_iron",
+    "base_rgb": [
+     58,
+     58,
+     64
+    ],
+    "mean_rgb": [
+     57.4,
+     57.4,
+     63.4
+    ]
+   },
+   "gold": {
+    "col": 3,
+    "row_from_top": 1,
+    "kind": "flat",
+    "palette": "gold_trim",
+    "base_rgb": [
+     204,
+     166,
+     82
+    ],
+    "mean_rgb": [
+     203.5,
+     165.5,
+     81.5
+    ]
+   },
+   "wood_dark": {
+    "col": 0,
+    "row_from_top": 2,
+    "kind": "wood planks (vertical seams + grain)",
+    "palette": "bark_dark",
+    "base_rgb": [
+     79,
+     58,
+     40
+    ],
+    "mean_rgb": [
+     75.4,
+     55.2,
+     37.9
+    ]
+   },
+   "wood": {
+    "col": 1,
+    "row_from_top": 2,
+    "kind": "timber grain",
+    "palette": "bark",
+    "base_rgb": [
+     92,
+     65,
+     43
+    ],
+    "mean_rgb": [
+     88.6,
+     62.4,
+     41.1
+    ]
+   },
+   "wood_light": {
+    "col": 2,
+    "row_from_top": 2,
+    "kind": "timber grain",
+    "palette": "bark_light",
+    "base_rgb": [
+     109,
+     77,
+     47
+    ],
+    "mean_rgb": [
+     105.0,
+     74.0,
+     45.0
+    ]
+   },
+   "cut_wood": {
+    "col": 3,
+    "row_from_top": 2,
+    "kind": "pale cut wood / hinoki (timber grain)",
+    "palette": "cream",
+    "base_rgb": [
+     226,
+     216,
+     190
+    ],
+    "mean_rgb": [
+     219.2,
+     209.5,
+     184.2
+    ]
+   },
+   "rope": {
+    "col": 0,
+    "row_from_top": 3,
+    "kind": "twisted straw rope (3 strands)",
+    "palette": "straw",
+    "base_rgb": [
+     204,
+     172,
+     98
+    ],
+    "mean_rgb": [
+     181.2,
+     152.7,
+     86.8
+    ]
+   },
+   "cloth": {
+    "col": 1,
+    "row_from_top": 3,
+    "kind": "flat",
+    "palette": "cream",
+    "base_rgb": [
+     226,
+     216,
+     190
+    ],
+    "mean_rgb": [
+     225.1,
+     215.1,
+     189.1
+    ]
+   },
+   "glow": {
+    "col": 2,
+    "row_from_top": 3,
+    "kind": "flat",
+    "palette": "lantern_glow",
+    "base_rgb": [
+     255,
+     190,
+     110
+    ],
+    "mean_rgb": [
+     253.0,
+     188.9,
+     109.2
+    ]
+   },
+   "maple_red": {
+    "col": 3,
+    "row_from_top": 3,
+    "kind": "flat (fallen momiji leaves)",
+    "palette": "maple_red",
+    "base_rgb": [
+     196,
+     58,
+     40
+    ],
+    "mean_rgb": [
+     195.4,
+     57.5,
+     39.5
+    ]
+   }
+  }
+ },
+ "models": {
+  "torii": {
+   "size": [
+    20.0,
+    21.75,
+    3.14
+   ],
+   "bbox_min": [
+    -10.0,
+    -1.573,
+    -0.619
+   ],
+   "bbox_max": [
+    10.0,
+    1.572,
+    21.13
+   ],
+   "triangles": {
+    "torii_Lacquer": 584,
+    "torii_Black": 176,
+    "torii_Stone": 124,
+    "total": 884
+   },
+   "budget": 1500,
+   "objects": [
+    "torii_Lacquer",
+    "torii_Black",
+    "torii_Stone"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "vermilion (tile lacquer, 584 tris)": [
+     200,
+     52,
+     38
+    ],
+    "dark_iron (tile iron, 176 tris)": [
+     58,
+     58,
+     64
+    ],
+    "rock_grey (tile stone_grey, 77 tris)": [
+     126,
+     124,
+     118
+    ],
+    "dwarf_stone (tile stone_warm, 32 tris)": [
+     148,
+     140,
+     128
+    ],
+    "moss (tile moss, 15 tris)": [
+     84,
+     122,
+     60
+    ]
+   },
+   "colliders": 6,
+   "info": {
+    "pillar_centres_x": [
+     -6.0,
+     6.0
+    ],
+    "pillar_spacing_at_ground": 12.0,
+    "pillar_height": 18.3,
+    "clear_width_between_pillars": {
+     "z=1": 10.03,
+     "z=5": 10.01,
+     "z=14.4 (under nuki)": 9.96
+    },
+    "clear_width_between_stone_bases": 8.68,
+    "clear_height_under_nuki": 14.4,
+    "kasagi_width": 20.0,
+    "notes": "pillars lean inward (uchikorobi) from x=+-6.0 to +-5.82; black nemaki band at the foot"
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 2350,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 15,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "torii_Lacquer": {
+      "open_edges": 96,
+      "nonmanifold_edges": 0
+     },
+     "torii_Black": {
+      "open_edges": 64,
+      "nonmanifold_edges": 0
+     },
+     "torii_Stone": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.016,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "torii_Lacquer": "718b257bf93296823b827830eebbaceff9bce616",
+    "torii_Black": "b1e37720e783f8d148e7ebb34f86eb675be2fa57",
+    "torii_Stone": "fcc3bc1f02d20afac2595236c622627743735a6b"
+   }
+  },
+  "toro_lantern": {
+   "size": [
+    3.76,
+    7.5,
+    3.26
+   ],
+   "bbox_min": [
+    -1.88,
+    -1.628,
+    -0.504
+   ],
+   "bbox_max": [
+    1.88,
+    1.628,
+    7.0
+   ],
+   "triangles": {
+    "toro_lantern_Stone": 670,
+    "toro_lantern__Glow": 24,
+    "total": 694
+   },
+   "budget": 900,
+   "objects": [
+    "toro_lantern_Stone",
+    "toro_lantern__Glow"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "rock_grey (tile stone_grey, 487 tris)": [
+     126,
+     124,
+     118
+    ],
+    "dwarf_stone (tile stone_warm, 140 tris)": [
+     148,
+     140,
+     128
+    ],
+    "moss (tile moss, 43 tris)": [
+     84,
+     122,
+     60
+    ],
+    "lantern_glow (tile glow, 24 tris)": [
+     255,
+     190,
+     110
+    ]
+   },
+   "colliders": 2,
+   "info": {
+    "style": "hexagonal Kasuga-style toro",
+    "windows": "2 openings, facing -Y (front) and +Y (back)",
+    "glow_mesh": "toro_lantern__Glow: closed hexagonal prism inside the light box, visible through the windows"
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 2658,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 13,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "toro_lantern_Stone": {
+      "open_edges": 40,
+      "nonmanifold_edges": 0
+     },
+     "toro_lantern__Glow": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.03,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "toro_lantern_Stone": "bb07fbae982ffc2b5f8afddf7775c74f50a0a179",
+    "toro_lantern__Glow": "9405dead62e4572ba3c742fb76f88bb79e2450c3"
+   }
+  },
+  "stone_stairs": {
+   "size": [
+    16.05,
+    10.54,
+    20.0
+   ],
+   "bbox_min": [
+    -8.03,
+    -10.0,
+    -1.0
+   ],
+   "bbox_max": [
+    8.024,
+    10.0,
+    9.541
+   ],
+   "triangles": {
+    "stone_stairs_Stone": 804,
+    "total": 804
+   },
+   "budget": 1200,
+   "objects": [
+    "stone_stairs_Stone"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "rock_grey (tile stone_grey, 372 tris)": [
+     126,
+     124,
+     118
+    ],
+    "maple_red (tile maple_red, 204 tris)": [
+     196,
+     58,
+     40
+    ],
+    "dwarf_stone (tile stone_warm, 136 tris)": [
+     148,
+     140,
+     128
+    ],
+    "moss (tile moss, 92 tris)": [
+     84,
+     122,
+     60
+    ]
+   },
+   "colliders": 8,
+   "info": {
+    "steps": 8,
+    "step_rise": 1.0,
+    "step_run": 2.5,
+    "width": 16.0,
+    "run": 20.0,
+    "rise": 8.0,
+    "tile_offset_blender": [
+     0.0,
+     20.0,
+     8.0
+    ],
+    "tiling": "place the next segment at this origin + (0, +20, +8) (Blender, Z up; climbing toward +Y)",
+    "ground_line": "terrain under the stairs: z = 0.4 * (y + 10) (the back edge of every tread)",
+    "curb_height_above_nose": 0.6,
+    "fallen_maple_leaves": 6
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 3400,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 36,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "stone_stairs_Stone": {
+      "open_edges": 72,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.047,
+    "ngons": 0,
+    "tiling": {
+     "curb_end_vertices": 8,
+     "curb_ends_match_after_offset": true,
+     "first_riser_y": -10.0,
+     "last_tread_ends_y": 10.0,
+     "rise_across_joint": 1.0
+    }
+   },
+   "geometry_sha1": {
+    "stone_stairs_Stone": "8b9994fbcc4981f41b8b115cf417442aeed359b0"
+   }
+  },
+  "tengu_gate": {
+   "size": [
+    74.87,
+    23.0,
+    19.07
+   ],
+   "bbox_min": [
+    -37.453,
+    -10.035,
+    -1.0
+   ],
+   "bbox_max": [
+    37.412,
+    9.034,
+    22.0
+   ],
+   "triangles": {
+    "tengu_gate_Lacquer": 964,
+    "tengu_gate_Wood": 96,
+    "tengu_gate_Roof": 1508,
+    "tengu_gate_Plaster": 184,
+    "tengu_gate_Stone": 1596,
+    "tengu_gate_Rock": 308,
+    "tengu_gate_Rope": 646,
+    "tengu_gate_DoorL": 249,
+    "tengu_gate_DoorR": 249,
+    "tengu_gate__Glow": 48,
+    "total": 5848
+   },
+   "budget": 6000,
+   "objects": [
+    "tengu_gate_Lacquer",
+    "tengu_gate_Wood",
+    "tengu_gate_Roof",
+    "tengu_gate_Plaster",
+    "tengu_gate_Stone",
+    "tengu_gate_Rock",
+    "tengu_gate_Rope",
+    "tengu_gate_DoorL",
+    "tengu_gate_DoorR",
+    "tengu_gate__Glow"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "rock_grey (tile stone_grey, 1319 tris)": [
+     126,
+     124,
+     118
+    ],
+    "dark_iron (tile roof_tile, 1220 tris)": [
+     58,
+     58,
+     64
+    ],
+    "vermilion (tile lacquer, 872 tris)": [
+     200,
+     52,
+     38
+    ],
+    "bark_dark (tile wood_dark, 440 tris)": [
+     79,
+     58,
+     40
+    ],
+    "limestone (tile plaster, 424 tris)": [
+     232,
+     228,
+     214
+    ],
+    "dwarf_stone (tile stone_warm, 414 tris)": [
+     148,
+     140,
+     128
+    ],
+    "straw (tile rope, 406 tris)": [
+     204,
+     172,
+     98
+    ],
+    "gold_trim (tile gold, 322 tris)": [
+     204,
+     166,
+     82
+    ],
+    "moss (tile moss, 171 tris)": [
+     84,
+     122,
+     60
+    ],
+    "cream (tile cut_wood, 116 tris)": [
+     226,
+     216,
+     190
+    ],
+    "dark_iron (tile iron, 96 tris)": [
+     58,
+     58,
+     64
+    ],
+    "lantern_glow (tile glow, 48 tris)": [
+     255,
+     190,
+     110
+    ]
+   },
+   "colliders": 21,
+   "info": {
+    "gate_width_roof": 26.0,
+    "height": 22.0,
+    "barrier_clear_space": {
+     "min": [
+      -6.75,
+      -5.1,
+      0.0
+     ],
+     "max": [
+      6.75,
+      -3.09,
+      13.4
+     ],
+     "note": "kept empty for the barrier effect: 2 studs deep in front of the closed doors' frontmost relief (iron studs at y=-3.07; planks at y=-2.75), between the pillar footings, up to the door top"
+    },
+    "doors": {
+     "DoorL": {
+      "x_range": [
+       -7.06,
+       -0.03
+      ],
+      "hinge_axis_xy": [
+       -7.06,
+       -2.475
+      ]
+     },
+     "DoorR": {
+      "x_range": [
+       0.03,
+       7.06
+      ],
+      "hinge_axis_xy": [
+       7.06,
+       -2.475
+      ]
+     },
+     "z_range": [
+      0.45,
+      13.4
+     ],
+     "front_face_y": -2.75,
+     "back_face_y": -2.2,
+     "note": "each leaf is its own mesh; rotate about the vertical hinge axis to open (remove tengu_gate_Wood's kannuki bar first, or hide it)"
+    },
+    "lamp_posts": {
+     "positions": [
+      [
+       -11.0,
+       -8.0,
+       0.0
+      ],
+      [
+       11.0,
+       -8.0,
+       0.0
+      ]
+     ],
+     "height": 8.75,
+     "glow_mesh": "tengu_gate__Glow"
+    },
+    "walls": "plaster walls x = +-8.85..22.6 (y = -3.25..-1.75), 10.7 tall, end inside the mountain rock"
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 3354,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 165,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "tengu_gate_Lacquer": {
+      "open_edges": 96,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_Wood": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_Roof": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_Plaster": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_Stone": {
+      "open_edges": 72,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_Rock": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_Rope": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_DoorL": {
+      "open_edges": 67,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate_DoorR": {
+      "open_edges": 67,
+      "nonmanifold_edges": 0
+     },
+     "tengu_gate__Glow": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.584,
+    "ngons": 0,
+    "barrier_space_triangles": 0
+   },
+   "geometry_sha1": {
+    "tengu_gate_Lacquer": "d3126994f688257f471eade6b2368825dc013945",
+    "tengu_gate_Wood": "fd3a8fc5872f7a2b03a877855e1cfeefd62e4ca7",
+    "tengu_gate_Roof": "fe7a6a118dc5f93df2f2b52f436491686f73110e",
+    "tengu_gate_Plaster": "09f55b65b5c708908aee69fd49e8034e7748af1c",
+    "tengu_gate_Stone": "df46a74c284ad33c923699e687bd05c1a7a42427",
+    "tengu_gate_Rock": "be279c6c341da2494ec4823969a59d078e1af178",
+    "tengu_gate_Rope": "0659e9510657cc25482901dd87b3a04b93a71c54",
+    "tengu_gate_DoorL": "efffd9ecdf71fd211686f1037b9670afae443524",
+    "tengu_gate_DoorR": "d5ab6a2cf34f0d32ca9bd12ce01e59664fb9c82e",
+    "tengu_gate__Glow": "3ca082a76261c4a0d2aad3b2cc2692914eccac19"
+   }
+  },
+  "roadside_shrine": {
+   "size": [
+    3.54,
+    5.52,
+    3.28
+   ],
+   "bbox_min": [
+    -1.771,
+    -1.6,
+    -0.45
+   ],
+   "bbox_max": [
+    1.768,
+    1.68,
+    5.067
+   ],
+   "triangles": {
+    "roadside_shrine_Stone": 74,
+    "roadside_shrine_Wood": 200,
+    "roadside_shrine_Roof": 120,
+    "roadside_shrine_Offering": 264,
+    "total": 658
+   },
+   "budget": 800,
+   "objects": [
+    "roadside_shrine_Stone",
+    "roadside_shrine_Wood",
+    "roadside_shrine_Roof",
+    "roadside_shrine_Offering"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "limestone (tile plaster, 160 tris)": [
+     232,
+     228,
+     214
+    ],
+    "bark_light (tile wood_light, 128 tris)": [
+     109,
+     77,
+     47
+    ],
+    "cream (tile cut_wood, 104 tris)": [
+     226,
+     216,
+     190
+    ],
+    "straw (tile rope, 104 tris)": [
+     204,
+     172,
+     98
+    ],
+    "maple_red (tile maple_red, 102 tris)": [
+     196,
+     58,
+     40
+    ],
+    "rock_grey (tile stone_grey, 26 tris)": [
+     126,
+     124,
+     118
+    ],
+    "dark_iron (tile roof_tile, 20 tris)": [
+     58,
+     58,
+     64
+    ],
+    "moss (tile moss, 8 tris)": [
+     84,
+     122,
+     60
+    ],
+    "dwarf_stone (tile stone_warm, 6 tris)": [
+     148,
+     140,
+     128
+    ]
+   },
+   "colliders": 2,
+   "info": {
+    "roof": "gabled (kirizuma) kawara roof with chigi and katsuogi",
+    "offering_cup": "white cup on the front ledge",
+    "paper_charm": "zigzag shide folded paper on a small straw rope across the shrine front",
+    "fallen_maple_leaves": 3
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 3802,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 26,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "roadside_shrine_Stone": {
+      "open_edges": 12,
+      "nonmanifold_edges": 0
+     },
+     "roadside_shrine_Wood": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "roadside_shrine_Roof": {
+      "open_edges": 24,
+      "nonmanifold_edges": 0
+     },
+     "roadside_shrine_Offering": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.111,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "roadside_shrine_Stone": "cb2dc42cce849497937d5ed194b58bd6ad54444c",
+    "roadside_shrine_Wood": "284c7c05ec7ebbe25951e7aff71fff250c49d547",
+    "roadside_shrine_Roof": "dff276e83494ebafda15f870027c758440f6ebc0",
+    "roadside_shrine_Offering": "12080d0ae2d19c62cf359ab24fe6c17b98347bf3"
+   }
+  },
+  "tengu_banner": {
+   "size": [
+    3.51,
+    14.8,
+    1.12
+   ],
+   "bbox_min": [
+    -0.564,
+    -0.55,
+    -0.8
+   ],
+   "bbox_max": [
+    2.95,
+    0.569,
+    14.0
+   ],
+   "triangles": {
+    "tengu_banner_Pole": 118,
+    "tengu_banner_Cloth": 168,
+    "total": 286
+   },
+   "budget": 300,
+   "objects": [
+    "tengu_banner_Pole",
+    "tengu_banner_Cloth"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "cream (tile cloth, 176 tris)": [
+     226,
+     216,
+     190
+    ],
+    "dark_iron (tile iron, 40 tris)": [
+     58,
+     58,
+     64
+    ],
+    "bark (tile wood, 32 tris)": [
+     92,
+     65,
+     43
+    ],
+    "rock_grey (tile stone_grey, 18 tris)": [
+     126,
+     124,
+     118
+    ],
+    "gold_trim (tile gold, 18 tris)": [
+     204,
+     166,
+     82
+    ],
+    "dwarf_stone (tile stone_warm, 2 tris)": [
+     148,
+     140,
+     128
+    ]
+   },
+   "colliders": 2,
+   "info": {
+    "cloth": {
+     "width": 2.5,
+     "height": 10.55,
+     "x_range": [
+      0.3,
+      2.8
+     ],
+     "z_range": [
+      2.6,
+      13.15
+     ]
+    },
+    "emblem": "black feather painted as cloth faces (constrained triangulation), visible on both sides; no text",
+    "emblem_triangles_per_side": 20
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 3083,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 9,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "tengu_banner_Pole": {
+      "open_edges": 18,
+      "nonmanifold_edges": 0
+     },
+     "tengu_banner_Cloth": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.012,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "tengu_banner_Pole": "ab16e688f3e0deb98f4452265b96d5fc4dc84d30",
+    "tengu_banner_Cloth": "6a5e2b633ff965d3b820db7797cfd73b94943489"
+   }
+  }
+ },
+ "checks": {
+  "problems": [],
+  "objects_with_unapplied_transforms": [],
+  "objects_with_modifiers": [],
+  "lowest_point_per_model": {
+   "torii": -0.619,
+   "toro_lantern": -0.504,
+   "stone_stairs": -1.0,
+   "tengu_gate": -1.0,
+   "roadside_shrine": -0.45,
+   "tengu_banner": -0.8
+  },
+  "fbx_determinism_patch": "patched (stable uids, fixed header date)"
+ },
+ "export_verification": {
+  "torii": {
+   "objects": [
+    "torii_Black",
+    "torii_Lacquer",
+    "torii_Stone"
+   ],
+   "triangles": {
+    "torii_Black": 176,
+    "torii_Lacquer": 584,
+    "torii_Stone": 124
+   },
+   "ngons": 0,
+   "size_studs": [
+    20.0,
+    21.75,
+    3.14
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "toro_lantern": {
+   "objects": [
+    "toro_lantern_Stone",
+    "toro_lantern__Glow"
+   ],
+   "triangles": {
+    "toro_lantern_Stone": 670,
+    "toro_lantern__Glow": 24
+   },
+   "ngons": 0,
+   "size_studs": [
+    3.76,
+    7.5,
+    3.26
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "stone_stairs": {
+   "objects": [
+    "stone_stairs_Stone"
+   ],
+   "triangles": {
+    "stone_stairs_Stone": 804
+   },
+   "ngons": 0,
+   "size_studs": [
+    16.05,
+    10.54,
+    20.0
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "tengu_gate": {
+   "objects": [
+    "tengu_gate_DoorL",
+    "tengu_gate_DoorR",
+    "tengu_gate_Lacquer",
+    "tengu_gate_Plaster",
+    "tengu_gate_Rock",
+    "tengu_gate_Roof",
+    "tengu_gate_Rope",
+    "tengu_gate_Stone",
+    "tengu_gate_Wood",
+    "tengu_gate__Glow"
+   ],
+   "triangles": {
+    "tengu_gate_DoorL": 249,
+    "tengu_gate_DoorR": 249,
+    "tengu_gate_Lacquer": 964,
+    "tengu_gate_Plaster": 184,
+    "tengu_gate_Rock": 308,
+    "tengu_gate_Roof": 1508,
+    "tengu_gate_Rope": 646,
+    "tengu_gate_Stone": 1596,
+    "tengu_gate_Wood": 96,
+    "tengu_gate__Glow": 48
+   },
+   "ngons": 0,
+   "size_studs": [
+    74.87,
+    23.0,
+    19.07
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "roadside_shrine": {
+   "objects": [
+    "roadside_shrine_Offering",
+    "roadside_shrine_Roof",
+    "roadside_shrine_Stone",
+    "roadside_shrine_Wood"
+   ],
+   "triangles": {
+    "roadside_shrine_Offering": 264,
+    "roadside_shrine_Roof": 120,
+    "roadside_shrine_Stone": 74,
+    "roadside_shrine_Wood": 200
+   },
+   "ngons": 0,
+   "size_studs": [
+    3.54,
+    5.52,
+    3.28
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "tengu_banner": {
+   "objects": [
+    "tengu_banner_Cloth",
+    "tengu_banner_Pole"
+   ],
+   "triangles": {
+    "tengu_banner_Cloth": 168,
+    "tengu_banner_Pole": 118
+   },
+   "ngons": 0,
+   "size_studs": [
+    3.51,
+    14.8,
+    1.12
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "_glb": {
+   "meshes": [
+    "roadside_shrine_Offering",
+    "roadside_shrine_Roof",
+    "roadside_shrine_Stone",
+    "roadside_shrine_Wood",
+    "stone_stairs_Stone",
+    "tengu_banner_Cloth",
+    "tengu_banner_Pole",
+    "tengu_gate_DoorL",
+    "tengu_gate_DoorR",
+    "tengu_gate_Lacquer",
+    "tengu_gate_Plaster",
+    "tengu_gate_Rock",
+    "tengu_gate_Roof",
+    "tengu_gate_Rope",
+    "tengu_gate_Stone",
+    "tengu_gate_Wood",
+    "tengu_gate__Glow",
+    "torii_Black",
+    "torii_Lacquer",
+    "torii_Stone",
+    "toro_lantern_Stone",
+    "toro_lantern__Glow"
+   ],
+   "ok": true
+  }
+ },
+ "renders": {
+  "torii": [
+   "renders/torii_front.png",
+   "renders/torii_back.png",
+   "renders/torii_left.png",
+   "renders/torii_right.png",
+   "renders/torii_three_quarter.png"
+  ],
+  "toro_lantern": [
+   "renders/toro_lantern_front.png",
+   "renders/toro_lantern_back.png",
+   "renders/toro_lantern_left.png",
+   "renders/toro_lantern_right.png",
+   "renders/toro_lantern_three_quarter.png"
+  ],
+  "stone_stairs": [
+   "renders/stone_stairs_front.png",
+   "renders/stone_stairs_back.png",
+   "renders/stone_stairs_left.png",
+   "renders/stone_stairs_right.png",
+   "renders/stone_stairs_three_quarter.png"
+  ],
+  "tengu_gate": [
+   "renders/tengu_gate_front.png",
+   "renders/tengu_gate_back.png",
+   "renders/tengu_gate_left.png",
+   "renders/tengu_gate_right.png",
+   "renders/tengu_gate_three_quarter.png"
+  ],
+  "roadside_shrine": [
+   "renders/roadside_shrine_front.png",
+   "renders/roadside_shrine_back.png",
+   "renders/roadside_shrine_left.png",
+   "renders/roadside_shrine_right.png",
+   "renders/roadside_shrine_three_quarter.png"
+  ],
+  "tengu_banner": [
+   "renders/tengu_banner_front.png",
+   "renders/tengu_banner_back.png",
+   "renders/tengu_banner_left.png",
+   "renders/tengu_banner_right.png",
+   "renders/tengu_banner_three_quarter.png"
+  ],
+  "lineup": [
+   "renders/lineup.png"
+  ],
+  "path_scene": [
+   "renders/path_scene.png",
+   "renders/path_scene_climb.png",
+   "renders/path_scene_side.png"
+  ]
+ },
+ "path_scene_layout": [
+  [
+   "stone_stairs",
+   [
+    0.0,
+    0.0,
+    0.0
+   ]
+  ],
+  [
+   "stone_stairs",
+   [
+    0.0,
+    20.0,
+    8.0
+   ]
+  ],
+  [
+   "stone_stairs",
+   [
+    0.0,
+    40.0,
+    16.0
+   ]
+  ],
+  [
+   "torii",
+   [
+    0.0,
+    -35.5,
+    0.0
+   ]
+  ],
+  [
+   "torii",
+   [
+    0.0,
+    -5.5,
+    2.0
+   ]
+  ],
+  [
+   "torii",
+   [
+    0.0,
+    24.5,
+    14.0
+   ]
+  ],
+  [
+   "torii",
+   [
+    0.0,
+    54.5,
+    24.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    -45.0,
+    0.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    -45.0,
+    0.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    -30.0,
+    0.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    -30.0,
+    0.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    -15.0,
+    0.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    -15.0,
+    0.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    0.0,
+    3.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    0.0,
+    3.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    15.0,
+    9.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    15.0,
+    9.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    30.0,
+    15.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    30.0,
+    15.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    45.0,
+    21.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    45.0,
+    21.65
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    -11.0,
+    60.0,
+    24.0
+   ]
+  ],
+  [
+   "toro_lantern",
+   [
+    11.0,
+    60.0,
+    24.0
+   ]
+  ],
+  [
+   "tengu_gate",
+   [
+    0.0,
+    80.0,
+    24.0
+   ]
+  ],
+  [
+   "tengu_banner",
+   [
+    -15.5,
+    62.0,
+    24.0
+   ]
+  ],
+  [
+   "tengu_banner",
+   [
+    15.5,
+    62.0,
+    24.0
+   ]
+  ],
+  [
+   "tengu_banner",
+   [
+    -13.0,
+    -20.0,
+    0.0
+   ]
+  ],
+  [
+   "tengu_banner",
+   [
+    13.0,
+    -20.0,
+    0.0
+   ]
+  ],
+  [
+   "roadside_shrine",
+   [
+    -17.0,
+    -27.0,
+    0.0
+   ],
+   "rotated 90 deg (faces the path)"
+  ]
+ ]
+}
