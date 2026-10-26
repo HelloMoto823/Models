@@ -1,0 +1,1691 @@
+{
+ "batch": "D",
+ "title": "Landmarks at the edges of the forest",
+ "generator": "build.py",
+ "blender": "5.2.3 LTS",
+ "units": "1 Blender unit = 1 stud; scene.unit_settings.scale_length = 0.01; Z up; front = -Y",
+ "size_convention": "[x, height (Blender Z), depth (Blender Y)] in studs, from the mesh bounding box",
+ "atlas": {
+  "file": "atlas.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "tile_px": 256,
+  "inset": 0.04,
+  "tiles": {
+   "stone_grey": {
+    "col": 0,
+    "row_from_top": 0,
+    "kind": "stone (soft round facet blotches)",
+    "palette": [
+     "rock_grey"
+    ],
+    "base_rgb": [
+     [
+      126,
+      124,
+      118
+     ]
+    ],
+    "mean_rgb": [
+     124.5,
+     122.5,
+     116.6
+    ]
+   },
+   "dwarf_stone": {
+    "col": 1,
+    "row_from_top": 0,
+    "kind": "stone (soft round facet blotches)",
+    "palette": [
+     "dwarf_stone"
+    ],
+    "base_rgb": [
+     [
+      148,
+      140,
+      128
+     ]
+    ],
+    "mean_rgb": [
+     151.3,
+     143.1,
+     130.8
+    ]
+   },
+   "masonry": {
+    "col": 2,
+    "row_from_top": 0,
+    "kind": "dwarven ashlar: 4 courses x 2 blocks, running bond, mortar + bevel (periodic)",
+    "palette": [
+     "dwarf_stone"
+    ],
+    "base_rgb": [
+     [
+      148,
+      140,
+      128
+     ]
+    ],
+    "mean_rgb": [
+     139.9,
+     132.3,
+     120.9
+    ]
+   },
+   "runes": {
+    "col": 3,
+    "row_from_top": 0,
+    "kind": "gold rune glyphs (2 rows x 3 abstract glyphs, no text) engraved in darkened dwarf stone",
+    "palette": [
+     "gold_trim",
+     "dwarf_stone"
+    ],
+    "base_rgb": [
+     [
+      204,
+      166,
+      82
+     ],
+     [
+      148,
+      140,
+      128
+     ]
+    ],
+    "mean_rgb": [
+     97.2,
+     88.9,
+     73.4
+    ]
+   },
+   "gold": {
+    "col": 0,
+    "row_from_top": 1,
+    "kind": "flat",
+    "palette": [
+     "gold_trim"
+    ],
+    "base_rgb": [
+     [
+      204,
+      166,
+      82
+     ]
+    ],
+    "mean_rgb": [
+     203.5,
+     165.5,
+     81.5
+    ]
+   },
+   "dark_stone": {
+    "col": 1,
+    "row_from_top": 1,
+    "kind": "stone (soft round blotches) in dark iron: Milim's dark stone, forged-iron doors, slate",
+    "palette": [
+     "dark_iron"
+    ],
+    "base_rgb": [
+     [
+      58,
+      58,
+      64
+     ]
+    ],
+    "mean_rgb": [
+     58.4,
+     58.4,
+     64.5
+    ]
+   },
+   "charred": {
+    "col": 2,
+    "row_from_top": 1,
+    "kind": "charred ground (soft blotches) + branching ember cracks",
+    "palette": [
+     "charred",
+     "ember"
+    ],
+    "base_rgb": [
+     [
+      44,
+      37,
+      32
+     ],
+     [
+      196,
+      84,
+      32
+     ]
+    ],
+    "mean_rgb": [
+     55.3,
+     41.1,
+     32.9
+    ]
+   },
+   "ember": {
+    "col": 3,
+    "row_from_top": 1,
+    "kind": "flat (glow)",
+    "palette": [
+     "ember"
+    ],
+    "base_rgb": [
+     [
+      196,
+      84,
+      32
+     ]
+    ],
+    "mean_rgb": [
+     195.5,
+     83.5,
+     31.5
+    ]
+   },
+   "limestone": {
+    "col": 0,
+    "row_from_top": 2,
+    "kind": "stone (soft round facet blotches)",
+    "palette": [
+     "limestone"
+    ],
+    "base_rgb": [
+     [
+      232,
+      228,
+      214
+     ]
+    ],
+    "mean_rgb": [
+     233.8,
+     229.8,
+     215.7
+    ]
+   },
+   "cave_dark": {
+    "col": 1,
+    "row_from_top": 2,
+    "kind": "vertical fade: limestone shadow (top, v=1) to cave black (v <= 0.5)",
+    "palette": [
+     "limestone",
+     "cave_black"
+    ],
+    "base_rgb": [
+     [
+      232,
+      228,
+      214
+     ],
+     [
+      16,
+      15,
+      14
+     ]
+    ],
+    "mean_rgb": [
+     39.7,
+     38.4,
+     36.0
+    ]
+   },
+   "moss": {
+    "col": 2,
+    "row_from_top": 2,
+    "kind": "moss clumps (periodic)",
+    "palette": [
+     "moss"
+    ],
+    "base_rgb": [
+     [
+      84,
+      122,
+      60
+     ]
+    ],
+    "mean_rgb": [
+     82.8,
+     120.5,
+     59.0
+    ]
+   },
+   "claw": {
+    "col": 3,
+    "row_from_top": 2,
+    "kind": "rock grey stone + 4 parallel claw gouges",
+    "palette": [
+     "rock_grey"
+    ],
+    "base_rgb": [
+     [
+      126,
+      124,
+      118
+     ]
+    ],
+    "mean_rgb": [
+     120.8,
+     118.9,
+     113.1
+    ]
+   },
+   "wood": {
+    "col": 0,
+    "row_from_top": 3,
+    "kind": "wood planks (vertical seams + grain)",
+    "palette": [
+     "bark"
+    ],
+    "base_rgb": [
+     [
+      92,
+      65,
+      43
+     ]
+    ],
+    "mean_rgb": [
+     86.9,
+     61.3,
+     40.4
+    ]
+   },
+   "wood_light": {
+    "col": 1,
+    "row_from_top": 3,
+    "kind": "timber grain",
+    "palette": [
+     "bark_light"
+    ],
+    "base_rgb": [
+     [
+      109,
+      77,
+      47
+     ]
+    ],
+    "mean_rgb": [
+     105.3,
+     74.2,
+     45.1
+    ]
+   },
+   "bone": {
+    "col": 2,
+    "row_from_top": 3,
+    "kind": "flat",
+    "palette": [
+     "cream"
+    ],
+    "base_rgb": [
+     [
+      226,
+      216,
+      190
+     ]
+    ],
+    "mean_rgb": [
+     225.5,
+     215.5,
+     189.5
+    ]
+   },
+   "vermilion": {
+    "col": 3,
+    "row_from_top": 3,
+    "kind": "flat",
+    "palette": [
+     "vermilion"
+    ],
+    "base_rgb": [
+     [
+      200,
+      52,
+      38
+     ]
+    ],
+    "mean_rgb": [
+     199.5,
+     51.5,
+     37.5
+    ]
+   }
+  }
+ },
+ "models": {
+  "dwarf_gate": {
+   "size": [
+    85.41,
+    58.86,
+    33.73
+   ],
+   "bbox_min": [
+    -42.394,
+    -15.5,
+    -1.0
+   ],
+   "bbox_max": [
+    43.02,
+    18.227,
+    57.857
+   ],
+   "triangles": {
+    "dwarf_gate_Stone": 1708,
+    "dwarf_gate_Gold": 490,
+    "dwarf_gate_Rock": 646,
+    "dwarf_gate_Statues": 1464,
+    "dwarf_gate_DoorL": 151,
+    "dwarf_gate_DoorR": 151,
+    "total": 4610
+   },
+   "budget": 6000,
+   "objects": [
+    "dwarf_gate_Stone",
+    "dwarf_gate_Gold",
+    "dwarf_gate_Rock",
+    "dwarf_gate_Statues",
+    "dwarf_gate_DoorL",
+    "dwarf_gate_DoorR"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "dwarf_stone (tile dwarf_stone, 1992 tris)": [
+     148,
+     140,
+     128
+    ],
+    "dwarf_stone (tile masonry, 836 tris)": [
+     148,
+     140,
+     128
+    ],
+    "gold_trim (tile gold, 752 tris)": [
+     204,
+     166,
+     82
+    ],
+    "rock_grey (tile stone_grey, 577 tris)": [
+     126,
+     124,
+     118
+    ],
+    "dark_iron (tile dark_stone, 320 tris)": [
+     58,
+     58,
+     64
+    ],
+    "moss (tile moss, 69 tris)": [
+     84,
+     122,
+     60
+    ],
+    "gold_trim (tile runes, 64 tris)": [
+     204,
+     166,
+     82
+    ],
+    "dwarf_stone (tile runes detail, 64 tris)": [
+     148,
+     140,
+     128
+    ]
+   },
+   "colliders": 30,
+   "info": {
+    "portal": {
+     "width": 40.0,
+     "height": 36.0,
+     "front_face_y": -2.0,
+     "door_plane_y": 0.6
+    },
+    "opening": {
+     "order0": [
+      [
+       3.0,
+       19.0,
+       11.0
+      ],
+      [
+       19.0,
+       21.0,
+       9.0
+      ],
+      [
+       21.0,
+       23.0,
+       7.0
+      ],
+      [
+       23.0,
+       25.0,
+       5.0
+      ]
+     ],
+     "order1": [
+      [
+       3.0,
+       18.0,
+       9.5
+      ],
+      [
+       18.0,
+       20.0,
+       7.5
+      ],
+      [
+       20.0,
+       22.0,
+       5.5
+      ],
+      [
+       22.0,
+       24.0,
+       3.5
+      ]
+     ],
+     "note": "(z0, z1, half width) bands of the stepped arch"
+    },
+    "steps": {
+     "width": 26.0,
+     "risers": 3,
+     "rise": 1.0,
+     "tread": 2.5,
+     "front_y": -15.5,
+     "note": "the 22-stud road ends at the first riser (y = -15.5); landing at z = 3"
+    },
+    "doors": {
+     "DoorL": {
+      "x_range": [
+       -9.5,
+       -0.03
+      ],
+      "hinge_axis_xy": [
+       -9.5,
+       0.2
+      ]
+     },
+     "DoorR": {
+      "x_range": [
+       0.03,
+       9.5
+      ],
+      "hinge_axis_xy": [
+       9.5,
+       0.2
+      ]
+     },
+     "z_range": [
+      3.25,
+      18.0
+     ],
+     "front_face_y": -0.2,
+     "note": "closed; the facade behind them is solid (the city is off-map)"
+    },
+    "statues": {
+     "positions": [
+      [
+       -27.0,
+       -6.0,
+       0.0
+      ],
+      [
+       27.0,
+       -6.0,
+       0.0
+      ]
+     ],
+     "plinth_top": 2.5,
+     "figure_height": 18.0
+    },
+    "rock_shoulders": "18 faceted cliff blocks: x to about +-43, top at z ~57, back body behind the facade",
+    "origin": "centre of the portal footprint at ground level; the door plane is at y = 0.6"
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 4116,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 208,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {}
+    },
+    "edges": {
+     "dwarf_gate_Stone": {
+      "open_edges": 232,
+      "nonmanifold_edges": 168
+     },
+     "dwarf_gate_Gold": {
+      "open_edges": 238,
+      "nonmanifold_edges": 0
+     },
+     "dwarf_gate_Rock": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "dwarf_gate_Statues": {
+      "open_edges": 16,
+      "nonmanifold_edges": 0
+     },
+     "dwarf_gate_DoorL": {
+      "open_edges": 57,
+      "nonmanifold_edges": 0
+     },
+     "dwarf_gate_DoorR": {
+      "open_edges": 57,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.001,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "dwarf_gate_Stone": "52208acf33f4f297f48b1c231def2d995e3ef0a0",
+    "dwarf_gate_Gold": "a0ece6e2a9970d5a402c7a19b522ceafd802c201",
+    "dwarf_gate_Rock": "2bd1566fa18c55943b92c4834129eaaae0a1a4b3",
+    "dwarf_gate_Statues": "e048adf3e6d4c9f612c0ff40a0c6083460c2a445",
+    "dwarf_gate_DoorL": "f9832cdae9dc8495688568c207b846c409ddb9b4",
+    "dwarf_gate_DoorR": "72b382bb57aeb0c99354fb2864f8113cfef729f0"
+   }
+  },
+  "blumund_marker": {
+   "size": [
+    16.55,
+    15.12,
+    9.75
+   ],
+   "bbox_min": [
+    -9.7,
+    -4.6,
+    -0.8
+   ],
+   "bbox_max": [
+    6.85,
+    5.15,
+    14.321
+   ],
+   "triangles": {
+    "blumund_marker_Stone": 88,
+    "blumund_marker_Wood": 360,
+    "blumund_marker_Roof": 76,
+    "blumund_marker_Sign": 60,
+    "blumund_marker_Barrier": 240,
+    "total": 824
+   },
+   "budget": 2500,
+   "objects": [
+    "blumund_marker_Stone",
+    "blumund_marker_Wood",
+    "blumund_marker_Roof",
+    "blumund_marker_Sign",
+    "blumund_marker_Barrier"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "bark_light (tile wood_light, 236 tris)": [
+     109,
+     77,
+     47
+    ],
+    "bark (tile wood, 162 tris)": [
+     92,
+     65,
+     43
+    ],
+    "vermilion (tile vermilion, 108 tris)": [
+     200,
+     52,
+     38
+    ],
+    "dark_iron (tile dark_stone, 106 tris)": [
+     58,
+     58,
+     64
+    ],
+    "cream (tile bone, 104 tris)": [
+     226,
+     216,
+     190
+    ],
+    "rock_grey (tile stone_grey, 100 tris)": [
+     126,
+     124,
+     118
+    ],
+    "moss (tile moss, 8 tris)": [
+     84,
+     122,
+     60
+    ]
+   },
+   "colliders": 6,
+   "info": {
+    "sign_face": {
+     "centre": [
+      -7.65,
+      -3.47,
+      6.2
+     ],
+     "size": [
+      2.9,
+      1.6
+     ],
+     "normal": [
+      0,
+      -1,
+      0
+     ],
+     "mesh": "blumund_marker_Sign",
+     "note": "blank cream face for the game's text (both sides)"
+    },
+    "barrier": {
+     "mesh": "blumund_marker_Barrier",
+     "pivot": [
+      -1.2,
+      -1.35,
+      3.4
+     ],
+     "axis": [
+      0,
+      1,
+      0
+     ],
+     "lifted_angle_deg": 76.0,
+     "note": "rotate by -76 deg about +Y through the pivot (right-handed, Blender axes) to lower the pole level across the road toward -X (11.2 studs from the pivot to the tip)"
+    },
+    "booth": {
+     "size": [
+      6.2,
+      6.2,
+      9.0
+     ],
+     "centre": [
+      3.2,
+      1.5
+     ]
+    },
+    "pillar": {
+     "height": 10.0,
+     "position": [
+      -5.0,
+      -3.3
+     ]
+    },
+    "road": "the road passes on the -X side; the sign faces travellers coming along -Y"
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 2165,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 50,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {}
+    },
+    "edges": {
+     "blumund_marker_Stone": {
+      "open_edges": 8,
+      "nonmanifold_edges": 0
+     },
+     "blumund_marker_Wood": {
+      "open_edges": 20,
+      "nonmanifold_edges": 8
+     },
+     "blumund_marker_Roof": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "blumund_marker_Sign": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "blumund_marker_Barrier": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "blumund_marker_Stone": "42574d63a4478c83ccc14fae46c3d36405b953f0",
+    "blumund_marker_Wood": "2656f0ab569d9c7b966359e75578a3300894a1ec",
+    "blumund_marker_Roof": "bf46c9e0a59262e3b5a0057ad6a84038783038f1",
+    "blumund_marker_Sign": "41c4e033c1ce2d61d81e4b4a202a61b86b6aaf38",
+    "blumund_marker_Barrier": "459472a8b518cb02929591667c70f18655bb6194"
+   }
+  },
+  "milim_marker": {
+   "size": [
+    22.14,
+    16.8,
+    22.95
+   ],
+   "bbox_min": [
+    -11.041,
+    -11.551,
+    -0.8
+   ],
+   "bbox_max": [
+    11.102,
+    11.395,
+    16.0
+   ],
+   "triangles": {
+    "milim_marker_Monolith": 356,
+    "milim_marker_Stones": 60,
+    "milim_marker_Ground": 510,
+    "total": 926
+   },
+   "budget": 2500,
+   "objects": [
+    "milim_marker_Monolith",
+    "milim_marker_Stones",
+    "milim_marker_Ground"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "dark_iron (tile dark_stone, 349 tris)": [
+     58,
+     58,
+     64
+    ],
+    "rock_grey (tile stone_grey, 341 tris)": [
+     126,
+     124,
+     118
+    ],
+    "charred (tile charred, 185 tris)": [
+     44,
+     37,
+     32
+    ],
+    "ember (tile charred detail, 185 tris)": [
+     196,
+     84,
+     32
+    ],
+    "ember (tile ember, 51 tris)": [
+     196,
+     84,
+     32
+    ]
+   },
+   "colliders": 4,
+   "info": {
+    "monolith_height": 16.0,
+    "emblem": {
+     "kind": "carved dragon claw (palm + 3 talons + dew claw), no text",
+     "carve_depth": 0.34,
+     "floor_tile": "ember",
+     "floor_triangles": 51,
+     "face_normal": [
+      0.0,
+      -0.998,
+      0.06
+     ]
+    },
+    "ground_disc": "radius ~10.7-11.5, top 0.04-0.2 above ground, edge sunk to -0.3; charred scorch burst",
+    "stones": "3 jagged dark shards leaning outward at 330, 212 and 95 degrees"
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 2030,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 6,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {}
+    },
+    "edges": {
+     "milim_marker_Monolith": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "milim_marker_Stones": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "milim_marker_Ground": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.123,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "milim_marker_Monolith": "d8106c94a0d703e556f03d1db5a4e844586799e7",
+    "milim_marker_Stones": "eef895256f90d79848349cfce0cb0fc088f9a095",
+    "milim_marker_Ground": "391047abf41981ff617d48122901a6c1cf50ef8d"
+   }
+  },
+  "limestone_cave": {
+   "size": [
+    54.18,
+    18.74,
+    34.89
+   ],
+   "bbox_min": [
+    -27.502,
+    -16.779,
+    -0.8
+   ],
+   "bbox_max": [
+    26.682,
+    18.108,
+    17.939
+   ],
+   "triangles": {
+    "limestone_cave_Rock": 2523,
+    "limestone_cave_Inside": 317,
+    "total": 2840
+   },
+   "budget": 5000,
+   "objects": [
+    "limestone_cave_Rock",
+    "limestone_cave_Inside"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "limestone (tile limestone, 2523 tris)": [
+     232,
+     228,
+     214
+    ],
+    "limestone (tile cave_dark, 317 tris)": [
+     232,
+     228,
+     214
+    ],
+    "cave_black (tile cave_dark detail, 317 tris)": [
+     16,
+     15,
+     14
+    ]
+   },
+   "colliders": 15,
+   "info": {
+    "mouth": {
+     "width": 22.0,
+     "height": 14.0,
+     "rim_y_at_ground": -13.0,
+     "brow_overhang": 1.6
+    },
+    "tunnel": {
+     "depth_to_back_plate": 15.0,
+     "back_plate_y": 2.0,
+     "fade": "cave_dark tile: limestone shadow at the mouth -> black from ~6.7 studs in",
+     "floor_z": 0.08
+    },
+    "outcrop_shell_size": [
+     49.42,
+     17.37,
+     29.4
+    ],
+    "outcrop_note": "outcrop shell alone [x, height above ground, depth]; the merged rounded masses and the two loose boulders widen the model footprint",
+    "stalactites": [
+     [
+      -6.9,
+      -12.1,
+      9.89
+     ],
+     [
+      -5.7,
+      -11.4,
+      9.26
+     ],
+     [
+      -1.6,
+      -12.3,
+      10.29
+     ],
+     [
+      -0.5,
+      -10.8,
+      11.79
+     ],
+     [
+      4.1,
+      -11.8,
+      10.85
+     ],
+     [
+      6.4,
+      -10.6,
+      9.98
+     ]
+    ],
+    "rounded_masses": 7,
+    "origin": "centre of the outcrop footprint; the mouth opens toward -Y"
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 3918,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 16,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {
+      "outcrop": 13549.93
+     }
+    },
+    "edges": {
+     "limestone_cave_Rock": {
+      "open_edges": 39,
+      "nonmanifold_edges": 0
+     },
+     "limestone_cave_Inside": {
+      "open_edges": 51,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.355,
+    "ngons": 0,
+    "mouth_clear_triangles": 0,
+    "mouth_clear_box": [
+     [
+      -7.5,
+      -12.4,
+      0.3
+     ],
+     [
+      7.5,
+      1.0,
+      9.0
+     ]
+    ],
+    "rock_through_tunnel_skin": {}
+   },
+   "geometry_sha1": {
+    "limestone_cave_Rock": "c6d23814b6db49d58fc9c2110ad72ecca9cb7d37",
+    "limestone_cave_Inside": "dcde411cef924aef604eda10a91424b7a0e1e89a"
+   }
+  },
+  "limestone_rock_a": {
+   "size": [
+    6.0,
+    4.3,
+    4.84
+   ],
+   "bbox_min": [
+    -2.76,
+    -2.357,
+    -0.6
+   ],
+   "bbox_max": [
+    3.24,
+    2.481,
+    3.697
+   ],
+   "triangles": {
+    "limestone_rock_a_Rock": 320,
+    "total": 320
+   },
+   "budget": 600,
+   "objects": [
+    "limestone_rock_a_Rock"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "limestone (tile limestone, 320 tris)": [
+     232,
+     228,
+     214
+    ]
+   },
+   "colliders": 1,
+   "info": {
+    "nominal_size": 6.0,
+    "mossy_top": false
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 3751,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 1,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {}
+    },
+    "edges": {
+     "limestone_rock_a_Rock": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "limestone_rock_a_Rock": "5971e95bd481cb2a823463aefc21fa22e5812653"
+   }
+  },
+  "limestone_rock_b": {
+   "size": [
+    12.0,
+    7.32,
+    9.52
+   ],
+   "bbox_min": [
+    -6.044,
+    -4.858,
+    -0.8
+   ],
+   "bbox_max": [
+    5.956,
+    4.662,
+    6.519
+   ],
+   "triangles": {
+    "limestone_rock_b_Rock": 320,
+    "total": 320
+   },
+   "budget": 600,
+   "objects": [
+    "limestone_rock_b_Rock"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "limestone (tile limestone, 292 tris)": [
+     232,
+     228,
+     214
+    ],
+    "moss (tile moss, 28 tris)": [
+     84,
+     122,
+     60
+    ]
+   },
+   "colliders": 1,
+   "info": {
+    "nominal_size": 12.0,
+    "mossy_top": true
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 3915,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 1,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {}
+    },
+    "edges": {
+     "limestone_rock_b_Rock": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "limestone_rock_b_Rock": "725de4b4d6b73cbb016ea2a5e154217694479e92"
+   }
+  },
+  "limestone_rock_c": {
+   "size": [
+    20.0,
+    10.29,
+    13.44
+   ],
+   "bbox_min": [
+    -9.514,
+    -7.33,
+    -0.8
+   ],
+   "bbox_max": [
+    10.486,
+    6.113,
+    9.487
+   ],
+   "triangles": {
+    "limestone_rock_c_Rock": 320,
+    "total": 320
+   },
+   "budget": 600,
+   "objects": [
+    "limestone_rock_c_Rock"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "limestone (tile limestone, 302 tris)": [
+     232,
+     228,
+     214
+    ],
+    "moss (tile moss, 18 tris)": [
+     84,
+     122,
+     60
+    ]
+   },
+   "colliders": 1,
+   "info": {
+    "nominal_size": 20.0,
+    "mossy_top": true
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 3936,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 1,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {}
+    },
+    "edges": {
+     "limestone_rock_c_Rock": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "ngons": 0
+   },
+   "geometry_sha1": {
+    "limestone_rock_c_Rock": "8c2f6a17511f8f6151896502448a15f799870bef"
+   }
+  },
+  "wolf_den": {
+   "size": [
+    30.48,
+    16.57,
+    22.24
+   ],
+   "bbox_min": [
+    -15.945,
+    -14.468,
+    -0.9
+   ],
+   "bbox_max": [
+    14.533,
+    7.768,
+    15.67
+   ],
+   "triangles": {
+    "wolf_den_Rock": 293,
+    "wolf_den_Inside": 133,
+    "wolf_den_Bones": 528,
+    "total": 954
+   },
+   "budget": 2500,
+   "objects": [
+    "wolf_den_Rock",
+    "wolf_den_Inside",
+    "wolf_den_Bones"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "cream (tile bone, 528 tris)": [
+     226,
+     216,
+     190
+    ],
+    "rock_grey (tile stone_grey, 240 tris)": [
+     126,
+     124,
+     118
+    ],
+    "limestone (tile cave_dark, 133 tris)": [
+     232,
+     228,
+     214
+    ],
+    "cave_black (tile cave_dark detail, 133 tris)": [
+     16,
+     15,
+     14
+    ],
+    "moss (tile moss, 43 tris)": [
+     84,
+     122,
+     60
+    ],
+    "rock_grey (tile claw, 10 tris)": [
+     126,
+     124,
+     118
+    ]
+   },
+   "colliders": 8,
+   "info": {
+    "burrow_mouth": {
+     "width": 10.0,
+     "height": 7.0,
+     "rim_y_at_ground": -7.0
+    },
+    "burrow_depth_to_back_plate": 7.0,
+    "rock_nominal": [
+     26,
+     14,
+     16
+    ],
+    "rock_size": [
+     25.54,
+     14.8,
+     15.67
+    ],
+    "rock_size_note": "main rock alone [x, depth, height above ground]; two side rocks and the bones widen the model footprint",
+    "bones": "3 long bones, 3 ribs, 1 skull (cream), resting on / sunk 0.02-0.05 into the ground",
+    "claw_marks": "claw tile on front faces left and right of the mouth",
+    "origin": "centre of the rock footprint; the burrow opens toward -Y (downhill)"
+   },
+   "checks": {
+    "coplanar_overlaps": {
+     "count": 0,
+     "examples": []
+    },
+    "facing": {
+     "rays": 5000,
+     "hits": 3285,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 25,
+     "floating": [],
+     "inverted_volume_pieces": [],
+     "closed_shell_volumes": {
+      "rock": 3647.85
+     }
+    },
+    "edges": {
+     "wolf_den_Rock": {
+      "open_edges": 23,
+      "nonmanifold_edges": 0
+     },
+     "wolf_den_Inside": {
+      "open_edges": 33,
+      "nonmanifold_edges": 0
+     },
+     "wolf_den_Bones": {
+      "open_edges": 36,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.089,
+    "ngons": 0,
+    "mouth_clear_triangles": 0,
+    "mouth_clear_box": [
+     [
+      -3.0,
+      -6.4,
+      0.3
+     ],
+     [
+      3.0,
+      -0.5999999999999996,
+      4.5
+     ]
+    ],
+    "rock_through_tunnel_skin": {}
+   },
+   "geometry_sha1": {
+    "wolf_den_Rock": "96fe834cd5f90151a7dcb6c07d712166bb2b83f8",
+    "wolf_den_Inside": "e3a7265b25d4ef0a43670ed1e725e3b480cc26a9",
+    "wolf_den_Bones": "45fda16de3439e64725dd4bbabc1e33bfaef211e"
+   }
+  }
+ },
+ "checks": {
+  "problems": [],
+  "coplanar_scan_self_test_pairs": 4,
+  "objects_with_unapplied_transforms": [],
+  "objects_with_modifiers": [],
+  "lowest_point_per_model": {
+   "dwarf_gate": -1.0,
+   "blumund_marker": -0.8,
+   "milim_marker": -0.8,
+   "limestone_cave": -0.8,
+   "limestone_rock_a": -0.6,
+   "limestone_rock_b": -0.8,
+   "limestone_rock_c": -0.8,
+   "wolf_den": -0.9
+  },
+  "fbx_determinism_patch": "patched (stable uids, fixed header date)"
+ },
+ "export_verification": {
+  "dwarf_gate": {
+   "objects": [
+    "dwarf_gate_DoorL",
+    "dwarf_gate_DoorR",
+    "dwarf_gate_Gold",
+    "dwarf_gate_Rock",
+    "dwarf_gate_Statues",
+    "dwarf_gate_Stone"
+   ],
+   "triangles": {
+    "dwarf_gate_DoorL": 151,
+    "dwarf_gate_DoorR": 151,
+    "dwarf_gate_Gold": 490,
+    "dwarf_gate_Rock": 646,
+    "dwarf_gate_Statues": 1464,
+    "dwarf_gate_Stone": 1708
+   },
+   "ngons": 0,
+   "size_studs": [
+    85.41,
+    58.86,
+    33.73
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "blumund_marker": {
+   "objects": [
+    "blumund_marker_Barrier",
+    "blumund_marker_Roof",
+    "blumund_marker_Sign",
+    "blumund_marker_Stone",
+    "blumund_marker_Wood"
+   ],
+   "triangles": {
+    "blumund_marker_Barrier": 240,
+    "blumund_marker_Roof": 76,
+    "blumund_marker_Sign": 60,
+    "blumund_marker_Stone": 88,
+    "blumund_marker_Wood": 360
+   },
+   "ngons": 0,
+   "size_studs": [
+    16.55,
+    15.12,
+    9.75
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "milim_marker": {
+   "objects": [
+    "milim_marker_Ground",
+    "milim_marker_Monolith",
+    "milim_marker_Stones"
+   ],
+   "triangles": {
+    "milim_marker_Ground": 510,
+    "milim_marker_Monolith": 356,
+    "milim_marker_Stones": 60
+   },
+   "ngons": 0,
+   "size_studs": [
+    22.14,
+    16.8,
+    22.95
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "limestone_cave": {
+   "objects": [
+    "limestone_cave_Inside",
+    "limestone_cave_Rock"
+   ],
+   "triangles": {
+    "limestone_cave_Inside": 317,
+    "limestone_cave_Rock": 2523
+   },
+   "ngons": 0,
+   "size_studs": [
+    54.18,
+    18.74,
+    34.89
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "limestone_rock_a": {
+   "objects": [
+    "limestone_rock_a_Rock"
+   ],
+   "triangles": {
+    "limestone_rock_a_Rock": 320
+   },
+   "ngons": 0,
+   "size_studs": [
+    6.0,
+    4.3,
+    4.84
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "limestone_rock_b": {
+   "objects": [
+    "limestone_rock_b_Rock"
+   ],
+   "triangles": {
+    "limestone_rock_b_Rock": 320
+   },
+   "ngons": 0,
+   "size_studs": [
+    12.0,
+    7.32,
+    9.52
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "limestone_rock_c": {
+   "objects": [
+    "limestone_rock_c_Rock"
+   ],
+   "triangles": {
+    "limestone_rock_c_Rock": 320
+   },
+   "ngons": 0,
+   "size_studs": [
+    20.0,
+    10.29,
+    13.44
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "wolf_den": {
+   "objects": [
+    "wolf_den_Bones",
+    "wolf_den_Inside",
+    "wolf_den_Rock"
+   ],
+   "triangles": {
+    "wolf_den_Bones": 528,
+    "wolf_den_Inside": 133,
+    "wolf_den_Rock": 293
+   },
+   "ngons": 0,
+   "size_studs": [
+    30.48,
+    16.57,
+    22.24
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "_glb": {
+   "meshes": [
+    "blumund_marker_Barrier",
+    "blumund_marker_Roof",
+    "blumund_marker_Sign",
+    "blumund_marker_Stone",
+    "blumund_marker_Wood",
+    "dwarf_gate_DoorL",
+    "dwarf_gate_DoorR",
+    "dwarf_gate_Gold",
+    "dwarf_gate_Rock",
+    "dwarf_gate_Statues",
+    "dwarf_gate_Stone",
+    "limestone_cave_Inside",
+    "limestone_cave_Rock",
+    "limestone_rock_a_Rock",
+    "limestone_rock_b_Rock",
+    "limestone_rock_c_Rock",
+    "milim_marker_Ground",
+    "milim_marker_Monolith",
+    "milim_marker_Stones",
+    "wolf_den_Bones",
+    "wolf_den_Inside",
+    "wolf_den_Rock"
+   ],
+   "ok": true
+  }
+ },
+ "renders": {
+  "dwarf_gate": [
+   "renders/dwarf_gate_front.png",
+   "renders/dwarf_gate_back.png",
+   "renders/dwarf_gate_left.png",
+   "renders/dwarf_gate_right.png",
+   "renders/dwarf_gate_three_quarter.png"
+  ],
+  "blumund_marker": [
+   "renders/blumund_marker_front.png",
+   "renders/blumund_marker_back.png",
+   "renders/blumund_marker_left.png",
+   "renders/blumund_marker_right.png",
+   "renders/blumund_marker_three_quarter.png"
+  ],
+  "milim_marker": [
+   "renders/milim_marker_front.png",
+   "renders/milim_marker_back.png",
+   "renders/milim_marker_left.png",
+   "renders/milim_marker_right.png",
+   "renders/milim_marker_three_quarter.png"
+  ],
+  "limestone_cave": [
+   "renders/limestone_cave_front.png",
+   "renders/limestone_cave_back.png",
+   "renders/limestone_cave_left.png",
+   "renders/limestone_cave_right.png",
+   "renders/limestone_cave_three_quarter.png"
+  ],
+  "limestone_rock_a": [
+   "renders/limestone_rock_a_front.png",
+   "renders/limestone_rock_a_back.png",
+   "renders/limestone_rock_a_left.png",
+   "renders/limestone_rock_a_right.png",
+   "renders/limestone_rock_a_three_quarter.png"
+  ],
+  "limestone_rock_b": [
+   "renders/limestone_rock_b_front.png",
+   "renders/limestone_rock_b_back.png",
+   "renders/limestone_rock_b_left.png",
+   "renders/limestone_rock_b_right.png",
+   "renders/limestone_rock_b_three_quarter.png"
+  ],
+  "limestone_rock_c": [
+   "renders/limestone_rock_c_front.png",
+   "renders/limestone_rock_c_back.png",
+   "renders/limestone_rock_c_left.png",
+   "renders/limestone_rock_c_right.png",
+   "renders/limestone_rock_c_three_quarter.png"
+  ],
+  "wolf_den": [
+   "renders/wolf_den_front.png",
+   "renders/wolf_den_back.png",
+   "renders/wolf_den_left.png",
+   "renders/wolf_den_right.png",
+   "renders/wolf_den_three_quarter.png"
+  ],
+  "lineup": [
+   "renders/lineup.png"
+  ],
+  "scale_check": [
+   "renders/scale_check.png"
+  ],
+  "colliders_check": [
+   "renders/colliders_check.png"
+  ]
+ }
+}
