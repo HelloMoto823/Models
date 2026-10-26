@@ -1,0 +1,2024 @@
+{
+ "batch": "C",
+ "title": "The burned Ogre village and the Orc army's trail",
+ "generator": "build.py",
+ "blender": "5.2.3 LTS",
+ "units": "1 Blender unit = 1 stud; scene.unit_settings.scale_length = 0.01; Z up; front = -Y",
+ "size_convention": "[x, height (Blender Z), depth (Blender Y)] in studs, from the mesh bounding box",
+ "atlas": {
+  "file": "atlas.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "tile_px": 256,
+  "inset": 0.04,
+  "tiles": {
+   "char_ember": {
+    "col": 0,
+    "row_from_top": 0,
+    "kind": "charred boards: 4 board seams + alligator blocks, ~45 % of the cracks glow ember orange",
+    "palette": "charred",
+    "base_rgb": [
+     44,
+     37,
+     32
+    ],
+    "extra_palette": {
+     "ember": [
+      196,
+      84,
+      32
+     ]
+    },
+    "mean_rgb": [
+     57.8,
+     41.4,
+     32.2
+    ]
+   },
+   "char": {
+    "col": 1,
+    "row_from_top": 0,
+    "kind": "charred boards: 4 board seams + dark alligator cracks (no ember)",
+    "palette": "charred",
+    "base_rgb": [
+     44,
+     37,
+     32
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     42.4,
+     35.5,
+     30.7
+    ]
+   },
+   "planks": {
+    "col": 2,
+    "row_from_top": 0,
+    "kind": "wood planks (4 board seams + grain)",
+    "palette": "bark",
+    "base_rgb": [
+     92,
+     65,
+     43
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     89.4,
+     63.0,
+     41.5
+    ]
+   },
+   "planks_dark": {
+    "col": 3,
+    "row_from_top": 0,
+    "kind": "wood planks (4 board seams + grain)",
+    "palette": "bark_dark",
+    "base_rgb": [
+     79,
+     58,
+     40
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     76.5,
+     56.1,
+     38.5
+    ]
+   },
+   "timber": {
+    "col": 0,
+    "row_from_top": 1,
+    "kind": "timber grain",
+    "palette": "bark_light",
+    "base_rgb": [
+     109,
+     77,
+     47
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     105.4,
+     74.3,
+     45.2
+    ]
+   },
+   "bark": {
+    "col": 1,
+    "row_from_top": 1,
+    "kind": "bark (vertical grooves)",
+    "palette": "bark",
+    "base_rgb": [
+     92,
+     65,
+     43
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     83.9,
+     59.1,
+     38.9
+    ]
+   },
+   "cut_wood": {
+    "col": 2,
+    "row_from_top": 1,
+    "kind": "cut wood / splinters (grain)",
+    "palette": "cream",
+    "base_rgb": [
+     226,
+     216,
+     190
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     219.2,
+     209.5,
+     184.2
+    ]
+   },
+   "thatch": {
+    "col": 3,
+    "row_from_top": 1,
+    "kind": "thatch (fine straw strands + 4 courses)",
+    "palette": "straw",
+    "base_rgb": [
+     204,
+     172,
+     98
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     194.0,
+     163.5,
+     92.9
+    ]
+   },
+   "stone": {
+    "col": 0,
+    "row_from_top": 2,
+    "kind": "stone (soft round facet blotches)",
+    "palette": "rock_grey",
+    "base_rgb": [
+     126,
+     124,
+     118
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     125.7,
+     123.8,
+     117.9
+    ]
+   },
+   "lacquer": {
+    "col": 1,
+    "row_from_top": 2,
+    "kind": "flat",
+    "palette": "vermilion",
+    "base_rgb": [
+     200,
+     52,
+     38
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     199.1,
+     51.4,
+     37.4
+    ]
+   },
+   "lacquer_soot": {
+    "col": 2,
+    "row_from_top": 2,
+    "kind": "vermilion lacquer with charred soot patches (~40 %)",
+    "palette": "vermilion",
+    "base_rgb": [
+     200,
+     52,
+     38
+    ],
+    "extra_palette": {
+     "charred": [
+      44,
+      37,
+      32
+     ]
+    },
+    "mean_rgb": [
+     138.9,
+     45.0,
+     34.5
+    ]
+   },
+   "iron": {
+    "col": 3,
+    "row_from_top": 2,
+    "kind": "flat",
+    "palette": "dark_iron",
+    "base_rgb": [
+     58,
+     58,
+     64
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     57.4,
+     57.4,
+     63.4
+    ]
+   },
+   "cloth": {
+    "col": 0,
+    "row_from_top": 3,
+    "kind": "flat",
+    "palette": "orc_cloth",
+    "base_rgb": [
+     112,
+     74,
+     52
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     111.5,
+     73.5,
+     51.5
+    ]
+   },
+   "bone": {
+    "col": 1,
+    "row_from_top": 3,
+    "kind": "flat",
+    "palette": "cream",
+    "base_rgb": [
+     226,
+     216,
+     190
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     225.7,
+     215.7,
+     189.7
+    ]
+   },
+   "rope": {
+    "col": 2,
+    "row_from_top": 3,
+    "kind": "twisted straw rope (3 strands)",
+    "palette": "straw",
+    "base_rgb": [
+     204,
+     172,
+     98
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     180.4,
+     152.0,
+     86.4
+    ]
+   },
+   "ember": {
+    "col": 3,
+    "row_from_top": 3,
+    "kind": "flat (glowing coals)",
+    "palette": "ember",
+    "base_rgb": [
+     196,
+     84,
+     32
+    ],
+    "extra_palette": {},
+    "mean_rgb": [
+     195.4,
+     83.5,
+     31.5
+    ]
+   }
+  }
+ },
+ "models": {
+  "oni_house_a": {
+   "size": [
+    24.68,
+    15.94,
+    21.41
+   ],
+   "bbox_min": [
+    -12.8,
+    -12.91,
+    -0.2
+   ],
+   "bbox_max": [
+    11.882,
+    8.5,
+    15.736
+   ],
+   "triangles": {
+    "oni_house_a_Frame": 752,
+    "oni_house_a_Walls": 1000,
+    "oni_house_a_Floor": 360,
+    "oni_house_a_Roof": 908,
+    "oni_house_a_Stone": 212,
+    "oni_house_a_Debris": 592,
+    "oni_house_a_Embers": 106,
+    "total": 3930
+   },
+   "budget": 4000,
+   "objects": [
+    "oni_house_a_Frame",
+    "oni_house_a_Walls",
+    "oni_house_a_Floor",
+    "oni_house_a_Roof",
+    "oni_house_a_Stone",
+    "oni_house_a_Debris",
+    "oni_house_a_Embers"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "charred (tile char, 2150 tris)": [
+     44,
+     37,
+     32
+    ],
+    "charred (tile char_ember, 638 tris)": [
+     44,
+     37,
+     32
+    ],
+    "ember (painted into tile char_ember)": [
+     196,
+     84,
+     32
+    ],
+    "bark_dark (tile planks_dark, 280 tris)": [
+     79,
+     58,
+     40
+    ],
+    "bark (tile planks, 278 tris)": [
+     92,
+     65,
+     43
+    ],
+    "rock_grey (tile stone, 248 tris)": [
+     126,
+     124,
+     118
+    ],
+    "straw (tile thatch, 230 tris)": [
+     204,
+     172,
+     98
+    ],
+    "ember (tile ember, 106 tris)": [
+     196,
+     84,
+     32
+    ]
+   },
+   "colliders": 35,
+   "info": {
+    "footprint": [
+     22.0,
+     13.0
+    ],
+    "floor_top": 1.6,
+    "roof": "gable thatch (32 deg); the left part still stands on the gable wall, the back wall and the posts; the right part caved in (a chunk slid inside onto the floor and the back wall stub, another slid out over the front stubs), with the snapped ridge beam fallen into the house",
+    "standing_walls": [
+     "left gable wall (x = -11)",
+     "back wall (y = +6.5, full height on the left 2/3)"
+    ],
+    "doorway": {
+     "x": [
+      -8.2,
+      -5.0
+     ],
+     "note": "gap in the burned front wall, step stone in front"
+    },
+    "interior_clearance": "x -10.3..-1.4, y -6.0..6.0 from the floor (1.6) to the tie beams (9.0): 7.4 studs",
+    "smoke_points": [
+     [
+      3.4,
+      -3.8,
+      2.0
+     ],
+     [
+      8.0,
+      -12.0,
+      0.4
+     ]
+    ]
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 3431,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 70,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "oni_house_a_Frame": {
+      "open_edges": 80,
+      "nonmanifold_edges": 4
+     },
+     "oni_house_a_Walls": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_a_Floor": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_a_Roof": {
+      "open_edges": 0,
+      "nonmanifold_edges": 8
+     },
+     "oni_house_a_Stone": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_a_Debris": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_a_Embers": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "coplanar_overlaps": {
+     "oni_house_a_Walls:wall_back / oni_house_a_Walls:wall_gable": 0.033,
+     "oni_house_a_Walls:wall_back / oni_house_a_Walls:wall_right_stub": 0.032,
+     "oni_house_a_Walls:wall_front_stub / oni_house_a_Walls:wall_gable": 0.032,
+     "oni_house_a_Walls:wall_front_stub / oni_house_a_Walls:wall_right_stub": 0.033
+    },
+    "ngons": 0,
+    "clear_boxes": {
+     "interior": {
+      "min": [
+       -10.3,
+       -6.0,
+       1.7
+      ],
+      "max": [
+       -1.4,
+       6.0,
+       8.95
+      ],
+      "triangles": 0,
+      "colliders": 0
+     },
+     "doorway": {
+      "min": [
+       -8.1,
+       -7.0,
+       1.7
+      ],
+      "max": [
+       -5.1,
+       -6.0,
+       8.95
+      ],
+      "triangles": 0,
+      "colliders": 0
+     }
+    }
+   },
+   "geometry_sha1": {
+    "oni_house_a_Frame": "14949ccf44700f572f94a3f0614fa37e7de90c85",
+    "oni_house_a_Walls": "8a9428f4ef8373f745d62469ffb0afd447b3f44e",
+    "oni_house_a_Floor": "57664f68d5a160de8a7642ecffb23b9e6dc07d2d",
+    "oni_house_a_Roof": "5e26626533c55b27797041a7e8a9655fd0554ed2",
+    "oni_house_a_Stone": "578c3cb2bdf8a1e1ba963b5175754622f91b9d80",
+    "oni_house_a_Debris": "8758f513e640d28792625e2233bb4ea02052e57c",
+    "oni_house_a_Embers": "3fdf25efe32d1bcbfb7823dbc907e4373379d68f"
+   }
+  },
+  "oni_house_b": {
+   "size": [
+    20.0,
+    13.73,
+    16.52
+   ],
+   "bbox_min": [
+    -10.2,
+    -9.739,
+    -0.566
+   ],
+   "bbox_max": [
+    9.797,
+    6.776,
+    13.161
+   ],
+   "triangles": {
+    "oni_house_b_Frame": 728,
+    "oni_house_b_Walls": 348,
+    "oni_house_b_Floor": 316,
+    "oni_house_b_Stone": 218,
+    "oni_house_b_Debris": 412,
+    "oni_house_b_Embers": 186,
+    "total": 2208
+   },
+   "budget": 4000,
+   "objects": [
+    "oni_house_b_Frame",
+    "oni_house_b_Walls",
+    "oni_house_b_Floor",
+    "oni_house_b_Stone",
+    "oni_house_b_Debris",
+    "oni_house_b_Embers"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "charred (tile char, 884 tris)": [
+     44,
+     37,
+     32
+    ],
+    "charred (tile char_ember, 524 tris)": [
+     44,
+     37,
+     32
+    ],
+    "ember (painted into tile char_ember)": [
+     196,
+     84,
+     32
+    ],
+    "rock_grey (tile stone, 276 tris)": [
+     126,
+     124,
+     118
+    ],
+    "bark_dark (tile planks_dark, 202 tris)": [
+     79,
+     58,
+     40
+    ],
+    "ember (tile ember, 186 tris)": [
+     196,
+     84,
+     32
+    ],
+    "bark (tile planks, 104 tris)": [
+     92,
+     65,
+     43
+    ],
+    "straw (tile thatch, 32 tris)": [
+     204,
+     172,
+     98
+    ]
+   },
+   "colliders": 17,
+   "info": {
+    "footprint": [
+     18.0,
+     12.0
+    ],
+    "floor_top": 1.6,
+    "standing": "post frame: 6 full posts, 6 broken posts, the 12.2-stud central pillar (daikoku-bashira), the left tie beam and pieces of the eave beams",
+    "floor": "left part (x -9 .. about 0) with a burned edge and one hole; joists and sills exposed on the right",
+    "fallen": "ridge beam (on the broken back post), two sasu rafters (one leaning on the central pillar), the front eave beam (leaning on a broken post), a joist and a sill",
+    "interior_clearance": "x -8.5..-3.75, y -5.5..5.5 from the floor (1.6) up to 8.95 (beams at 9.0)",
+    "smoke_points": [
+     [
+      5.0,
+      0.4,
+      0.4
+     ],
+     [
+      -1.6,
+      3.4,
+      2.0
+     ],
+     [
+      1.4,
+      -7.6,
+      0.4
+     ]
+    ]
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 2282,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 62,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "oni_house_b_Frame": {
+      "open_edges": 76,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_b_Walls": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_b_Floor": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_b_Stone": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_b_Debris": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_b_Embers": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "coplanar_overlaps": {
+     "oni_house_b_Embers:coal / oni_house_b_Embers:coal": 0.05,
+     "oni_house_b_Walls:wall_stub / oni_house_b_Walls:wall_stub": 0.032
+    },
+    "ngons": 0,
+    "clear_boxes": {
+     "interior": {
+      "min": [
+       -8.5,
+       -5.5,
+       1.7
+      ],
+      "max": [
+       -3.75,
+       5.5,
+       8.95
+      ],
+      "triangles": 0,
+      "colliders": 0
+     }
+    }
+   },
+   "geometry_sha1": {
+    "oni_house_b_Frame": "6d6d6287b38f797c8016e28a7356ad8c8af7da86",
+    "oni_house_b_Walls": "faaf19567fe23b9a2eeb6a0a7405403a15d3446d",
+    "oni_house_b_Floor": "4ba48bdfde2763b049605e648a5519fa73968882",
+    "oni_house_b_Stone": "899ea48d8d15dc4f7be52a19251a4ba5d9fe3f60",
+    "oni_house_b_Debris": "4985ba8b9f3fe18e033e0dc79c041b2241925674",
+    "oni_house_b_Embers": "fe4bc3b6e89dc1977d17b9fdedb63a4fb72db316"
+   }
+  },
+  "oni_house_c": {
+   "size": [
+    28.0,
+    15.91,
+    18.53
+   ],
+   "bbox_min": [
+    -14.0,
+    -9.533,
+    -0.2
+   ],
+   "bbox_max": [
+    14.0,
+    9.0,
+    15.708
+   ],
+   "triangles": {
+    "oni_house_c_Frame": 764,
+    "oni_house_c_Walls": 932,
+    "oni_house_c_Floor": 304,
+    "oni_house_c_Roof": 912,
+    "oni_house_c_Stone": 228,
+    "oni_house_c_Debris": 328,
+    "oni_house_c_Embers": 116,
+    "total": 3584
+   },
+   "budget": 4000,
+   "objects": [
+    "oni_house_c_Frame",
+    "oni_house_c_Walls",
+    "oni_house_c_Floor",
+    "oni_house_c_Roof",
+    "oni_house_c_Stone",
+    "oni_house_c_Debris",
+    "oni_house_c_Embers"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "charred (tile char, 1613 tris)": [
+     44,
+     37,
+     32
+    ],
+    "bark_dark (tile planks_dark, 480 tris)": [
+     79,
+     58,
+     40
+    ],
+    "bark (tile planks, 474 tris)": [
+     92,
+     65,
+     43
+    ],
+    "charred (tile char_ember, 351 tris)": [
+     44,
+     37,
+     32
+    ],
+    "ember (painted into tile char_ember)": [
+     196,
+     84,
+     32
+    ],
+    "straw (tile thatch, 286 tris)": [
+     204,
+     172,
+     98
+    ],
+    "rock_grey (tile stone, 264 tris)": [
+     126,
+     124,
+     118
+    ],
+    "ember (tile ember, 116 tris)": [
+     196,
+     84,
+     32
+    ]
+   },
+   "colliders": 37,
+   "info": {
+    "footprint": [
+     24.0,
+     14.0
+    ],
+    "floor_top": 1.6,
+    "roof": "hipped thatch (30 deg), burned through on the front-right (charred rafters and purlins visible in the hole)",
+    "eave_beam_top": 9.8,
+    "ridge_top": 15.58,
+    "doorway": {
+     "x": [
+      -9.6,
+      -3.4
+     ],
+     "clear_height": 7.1
+    },
+    "doors": "itado sliding doors: one knocked out and leaning on the front wall, one cracked and tilted in its track (each its own piece in oni_house_c_Debris)",
+    "interior_clearance": "x -11.5..3.4, y -6.5..6.5 from the floor (1.6) to the tie beams (9.0): 7.4 studs",
+    "smoke_points": [
+     [
+      4.6,
+      -4.7,
+      2.0
+     ],
+     [
+      6.3,
+      -3.8,
+      0.4
+     ]
+    ]
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 4292,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 89,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "oni_house_c_Frame": {
+      "open_edges": 56,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_c_Walls": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_c_Floor": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_c_Roof": {
+      "open_edges": 0,
+      "nonmanifold_edges": 13
+     },
+     "oni_house_c_Stone": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_c_Debris": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "oni_house_c_Embers": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "coplanar_overlaps": {
+     "oni_house_c_Embers:coal / oni_house_c_Embers:coal": 0.048,
+     "oni_house_c_Walls:wall_back / oni_house_c_Walls:wall_left": 0.064,
+     "oni_house_c_Walls:wall_back / oni_house_c_Walls:wall_right": 0.064,
+     "oni_house_c_Walls:wall_front / oni_house_c_Walls:wall_left": 0.065,
+     "oni_house_c_Walls:wall_front / oni_house_c_Walls:wall_right": 0.064
+    },
+    "ngons": 0,
+    "clear_boxes": {
+     "interior": {
+      "min": [
+       -11.5,
+       -6.5,
+       1.7
+      ],
+      "max": [
+       3.4,
+       6.5,
+       8.95
+      ],
+      "triangles": 0,
+      "colliders": 0
+     },
+     "doorway": {
+      "min": [
+       -9.4,
+       -7.6,
+       1.75
+      ],
+      "max": [
+       -6.5,
+       -6.4,
+       8.6
+      ],
+      "triangles": 0,
+      "colliders": 0
+     }
+    }
+   },
+   "geometry_sha1": {
+    "oni_house_c_Frame": "a317e5064a190776803b848962937ffd4b196712",
+    "oni_house_c_Walls": "46be0894f04762c10721724a79f121b5fb90ff15",
+    "oni_house_c_Floor": "2d0dbdbed9c8e1cc31077f6261080d997eae076f",
+    "oni_house_c_Roof": "9a683bc5190dfca389fa04e0f6ab47c5b395612e",
+    "oni_house_c_Stone": "083c5fda2b1061799c9c2788696c3c4e61987d40",
+    "oni_house_c_Debris": "a3f63d14882f997fc52bd31573bbe5a19dba4106",
+    "oni_house_c_Embers": "8878852e607b47da879abd58c02382a9471f096a"
+   }
+  },
+  "stake_fence": {
+   "size": [
+    24.0,
+    7.95,
+    4.98
+   ],
+   "bbox_min": [
+    -12.0,
+    -3.994,
+    -1.0
+   ],
+   "bbox_max": [
+    12.0,
+    0.983,
+    6.953
+   ],
+   "triangles": {
+    "stake_fence_Stakes": 618,
+    "stake_fence_Rails": 208,
+    "total": 826
+   },
+   "budget": 900,
+   "objects": [
+    "stake_fence_Stakes",
+    "stake_fence_Rails"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "bark (tile bark, 376 tris)": [
+     92,
+     65,
+     43
+    ],
+    "charred (tile char, 168 tris)": [
+     44,
+     37,
+     32
+    ],
+    "charred (tile char_ember, 162 tris)": [
+     44,
+     37,
+     32
+    ],
+    "ember (painted into tile char_ember)": [
+     196,
+     84,
+     32
+    ],
+    "straw (tile rope, 120 tris)": [
+     204,
+     172,
+     98
+    ]
+   },
+   "colliders": 2,
+   "info": {
+    "length": 24.0,
+    "stakes": 23,
+    "stake_spacing": 1.0,
+    "stake_x": [
+     -11.5,
+     -10.5,
+     -9.5,
+     -8.5,
+     -7.5,
+     -6.5,
+     -5.5,
+     -4.5,
+     -3.5,
+     -2.5,
+     -1.5,
+     -0.5,
+     0.5,
+     1.5,
+     2.5,
+     3.5,
+     4.5,
+     5.5,
+     6.5,
+     7.5,
+     8.5,
+     9.5,
+     10.5,
+     11.5
+    ],
+    "missing": {
+     "gone": -5.5,
+     "snapped_stump": 3.5,
+     "leaning_22deg_forward": 7.5
+    },
+    "rails": {
+     "y": 0.66,
+     "z": [
+      1.9,
+      4.6
+     ],
+     "x_range": [
+      -12.0,
+      12.0
+     ],
+     "radius": 0.24
+    },
+    "tiling": "place the next segment at this origin + (24, 0, 0) (Blender X); rails butt end to end and the stake rhythm (1 stud) continues across the joint",
+    "front": "-Y (outside of the palisade, sharpened faces); rails and lashings on the +Y (inside) side"
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 2855,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 32,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "stake_fence_Stakes": {
+      "open_edges": 138,
+      "nonmanifold_edges": 0
+     },
+     "stake_fence_Rails": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.0,
+    "coplanar_overlaps": {},
+    "ngons": 0,
+    "clear_boxes": {},
+    "tiling": {
+     "rail_end_vertices": 12,
+     "rail_ends_match": true,
+     "stake_gap_across_joint": 1.0,
+     "x_extent": [
+      -12.0,
+      12.0
+     ],
+     "ok": true
+    }
+   },
+   "geometry_sha1": {
+    "stake_fence_Stakes": "e91da7598b6a2475939893c6fa7feededa31a34d",
+    "stake_fence_Rails": "44613693fd1a1b93d79dddca1eebabfb80681718"
+   }
+  },
+  "battle_debris_a": {
+   "size": [
+    8.07,
+    7.88,
+    8.69
+   ],
+   "bbox_min": [
+    -4.036,
+    -3.972,
+    -0.918
+   ],
+   "bbox_max": [
+    4.03,
+    4.715,
+    6.966
+   ],
+   "triangles": {
+    "battle_debris_a_Wood": 801,
+    "battle_debris_a_Iron": 104,
+    "battle_debris_a_Cloth": 268,
+    "total": 1173
+   },
+   "budget": 1200,
+   "objects": [
+    "battle_debris_a_Wood",
+    "battle_debris_a_Iron",
+    "battle_debris_a_Cloth"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "bark_light (tile timber, 410 tris)": [
+     109,
+     77,
+     47
+    ],
+    "dark_iron (tile iron, 247 tris)": [
+     58,
+     58,
+     64
+    ],
+    "orc_cloth (tile cloth, 148 tris)": [
+     112,
+     74,
+     52
+    ],
+    "cream (tile cut_wood, 120 tris)": [
+     226,
+     216,
+     190
+    ],
+    "cream (tile bone, 112 tris)": [
+     226,
+     216,
+     190
+    ],
+    "bark_dark (tile planks_dark, 66 tris)": [
+     79,
+     58,
+     40
+    ],
+    "bark (tile planks, 44 tris)": [
+     92,
+     65,
+     43
+    ],
+    "charred (tile char, 26 tris)": [
+     44,
+     37,
+     32
+    ]
+   },
+   "colliders": 2,
+   "info": {
+    "footprint": "about 8 x 8",
+    "items": [
+     "banner pole planted + torn banner (boar emblem)",
+     "snapped pole top",
+     "broken cart wheel (flat)",
+     "cracked round shield",
+     "dented helmet",
+     "3 broken spears (one stuck head-down in the mud)"
+    ],
+    "banner_emblem": "crude boar head (ears, tusks, snout) in bone colour with dark-iron eyes, nostrils and snout line, made of cloth faces (constrained triangulation), visible on both sides"
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 1489,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 27,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "battle_debris_a_Wood": {
+      "open_edges": 7,
+      "nonmanifold_edges": 0
+     },
+     "battle_debris_a_Iron": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "battle_debris_a_Cloth": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.058,
+    "coplanar_overlaps": {},
+    "ngons": 0,
+    "clear_boxes": {}
+   },
+   "geometry_sha1": {
+    "battle_debris_a_Wood": "f6d806fee43a690ec16598d94fc3c8ef8714d25c",
+    "battle_debris_a_Iron": "3f26bac691905c546008acb8874464223d395147",
+    "battle_debris_a_Cloth": "e1f94c25064ca11317c537a8c55e9df272293cbd"
+   }
+  },
+  "battle_debris_b": {
+   "size": [
+    7.57,
+    4.66,
+    8.68
+   ],
+   "bbox_min": [
+    -3.598,
+    -4.751,
+    -0.95
+   ],
+   "bbox_max": [
+    3.971,
+    3.927,
+    3.708
+   ],
+   "triangles": {
+    "battle_debris_b_Wood": 825,
+    "battle_debris_b_Iron": 104,
+    "battle_debris_b_Cloth": 268,
+    "total": 1197
+   },
+   "budget": 1200,
+   "objects": [
+    "battle_debris_b_Wood",
+    "battle_debris_b_Iron",
+    "battle_debris_b_Cloth"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "bark_light (tile timber, 418 tris)": [
+     109,
+     77,
+     47
+    ],
+    "dark_iron (tile iron, 287 tris)": [
+     58,
+     58,
+     64
+    ],
+    "orc_cloth (tile cloth, 124 tris)": [
+     112,
+     74,
+     52
+    ],
+    "cream (tile cut_wood, 120 tris)": [
+     226,
+     216,
+     190
+    ],
+    "cream (tile bone, 112 tris)": [
+     226,
+     216,
+     190
+    ],
+    "bark_dark (tile planks_dark, 66 tris)": [
+     79,
+     58,
+     40
+    ],
+    "bark (tile planks, 44 tris)": [
+     92,
+     65,
+     43
+    ],
+    "charred (tile char, 26 tris)": [
+     44,
+     37,
+     32
+    ]
+   },
+   "colliders": 1,
+   "info": {
+    "footprint": "about 8 x 8",
+    "items": [
+     "broken cart wheel stuck upright on its axle",
+     "shield leaning on it",
+     "helmet upside down",
+     "3 broken spears lying + 1 stuck head-down",
+     "torn banner draped over the spears (boar emblem) + its snapped pole"
+    ]
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 1814,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 28,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "battle_debris_b_Wood": {
+      "open_edges": 7,
+      "nonmanifold_edges": 0
+     },
+     "battle_debris_b_Iron": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "battle_debris_b_Cloth": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.058,
+    "coplanar_overlaps": {},
+    "ngons": 0,
+    "clear_boxes": {}
+   },
+   "geometry_sha1": {
+    "battle_debris_b_Wood": "61f334ee88e806b47f94e649e847495c0742e390",
+    "battle_debris_b_Iron": "a9722b7afbca615e0b9bdb3053cda1b68dc1c95e",
+    "battle_debris_b_Cloth": "26b5bdf440d43bdb9276b954e4aa0ea60ed82e3a"
+   }
+  },
+  "torii_broken": {
+   "size": [
+    24.74,
+    19.48,
+    24.97
+   ],
+   "bbox_min": [
+    -17.035,
+    -14.14,
+    -0.628
+   ],
+   "bbox_max": [
+    7.7,
+    10.826,
+    18.85
+   ],
+   "triangles": {
+    "torii_broken_Pillars": 568,
+    "torii_broken_Fallen": 670,
+    "torii_broken_Stone": 124,
+    "torii_broken_Embers": 74,
+    "total": 1436
+   },
+   "budget": 1500,
+   "objects": [
+    "torii_broken_Pillars",
+    "torii_broken_Fallen",
+    "torii_broken_Stone",
+    "torii_broken_Embers"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "charred (tile char, 596 tris)": [
+     44,
+     37,
+     32
+    ],
+    "vermilion (tile lacquer_soot, 286 tris)": [
+     200,
+     52,
+     38
+    ],
+    "charred (painted into tile lacquer_soot)": [
+     44,
+     37,
+     32
+    ],
+    "vermilion (tile lacquer, 192 tris)": [
+     200,
+     52,
+     38
+    ],
+    "rock_grey (tile stone, 144 tris)": [
+     126,
+     124,
+     118
+    ],
+    "charred (tile char_ember, 112 tris)": [
+     44,
+     37,
+     32
+    ],
+    "ember (painted into tile char_ember)": [
+     196,
+     84,
+     32
+    ],
+    "ember (tile ember, 74 tris)": [
+     196,
+     84,
+     32
+    ],
+    "dark_iron (tile iron, 32 tris)": [
+     58,
+     58,
+     64
+    ]
+   },
+   "colliders": 8,
+   "info": {
+    "pillar_centres_x": [
+     -6.0,
+     6.0
+    ],
+    "pillar_spacing": 12.0,
+    "standing_pillar": {
+     "x": 6.0,
+     "height": 18.3,
+     "note": "the kasagi seat at the top is charred; tenon visible"
+    },
+    "snapped_pillar": {
+     "x": -6.0,
+     "break_height": 8.9,
+     "note": "upper half lies behind-left"
+    },
+    "fallen_kasagi": {
+     "length": 20.0,
+     "pitch_deg": 32.0,
+     "yaw_deg": 51.5,
+     "upper_end": "resting on the splintered left stub (z ~ 9.1)",
+     "lower_end": "in the mud, front-left of the gate"
+    },
+    "wagon_corridor": {
+     "min": [
+      -3.5,
+      -16.0,
+      0.05
+     ],
+     "max": [
+      3.5,
+      16.0,
+      9.0
+     ],
+     "note": "7 studs wide x 9 tall along the full depth: no geometry, no collider"
+    },
+    "clear_width_between_bases": 8.68,
+    "smoke_points": [
+     [
+      -7.3,
+      -2.6,
+      0.3
+     ],
+     [
+      -5.91,
+      0.0,
+      9.5
+     ]
+    ]
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 872,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 23,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "torii_broken_Pillars": {
+      "open_edges": 64,
+      "nonmanifold_edges": 0
+     },
+     "torii_broken_Fallen": {
+      "open_edges": 32,
+      "nonmanifold_edges": 0
+     },
+     "torii_broken_Stone": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     },
+     "torii_broken_Embers": {
+      "open_edges": 0,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.081,
+    "coplanar_overlaps": {},
+    "ngons": 0,
+    "clear_boxes": {
+     "wagon_corridor": {
+      "min": [
+       -3.5,
+       -16.0,
+       0.05
+      ],
+      "max": [
+       3.5,
+       16.0,
+       9.0
+      ],
+      "triangles": 0,
+      "colliders": 0
+     }
+    }
+   },
+   "geometry_sha1": {
+    "torii_broken_Pillars": "32cc796a76ed19887c46bda42dcecc4d7594c021",
+    "torii_broken_Fallen": "5601dde6d607b5f008efe81b211556e070687fd3",
+    "torii_broken_Stone": "55890ff73ece0bbf227b32a9e7c3d55d327f7853",
+    "torii_broken_Embers": "0cf7ad1a78db23d87304a16f67f74d6cd183623c"
+   }
+  },
+  "trampled_log": {
+   "size": [
+    30.47,
+    4.2,
+    5.83
+   ],
+   "bbox_min": [
+    -15.489,
+    -2.835,
+    -0.311
+   ],
+   "bbox_max": [
+    14.982,
+    2.998,
+    3.891
+   ],
+   "triangles": {
+    "trampled_log_Bark": 642,
+    "total": 642
+   },
+   "budget": 900,
+   "objects": [
+    "trampled_log_Bark"
+   ],
+   "bones": [],
+   "material": "Atlas (atlas.png, Base Color only, Roughness 0.9)",
+   "colours": {
+    "bark (tile bark, 460 tris)": [
+     92,
+     65,
+     43
+    ],
+    "cream (tile cut_wood, 182 tris)": [
+     226,
+     216,
+     190
+    ]
+   },
+   "colliders": 2,
+   "info": {
+    "length_trunk": 27.05,
+    "diameter_butt": 3.32,
+    "diameter_top": 2.16,
+    "butt_end": "+X: snapped trunk, long splinters (bark outside, cream wood inside)",
+    "top_end": "-X: torn-off crown, short splinters",
+    "branch_stubs": [
+     [
+      -11.14,
+      -1.88,
+      2.52
+     ],
+     [
+      -8.55,
+      1.85,
+      3.56
+     ],
+     [
+      -4.23,
+      -0.13,
+      3.17
+     ],
+     [
+      -0.73,
+      2.71,
+      2.28
+     ],
+     [
+      3.25,
+      -2.29,
+      2.09
+     ],
+     [
+      6.46,
+      0.61,
+      3.25
+     ]
+    ],
+    "note": "lies on the ground, bottom sunk 0.3 studs; felled by the army (snapped / pushed over), not cut"
+   },
+   "checks": {
+    "facing": {
+     "rays": 5000,
+     "hits": 2593,
+     "backfacing_first_hits": 0,
+     "examples": []
+    },
+    "floating": {
+     "pieces": 10,
+     "floating": [],
+     "inverted_volume_pieces": []
+    },
+    "edges": {
+     "trampled_log_Bark": {
+      "open_edges": 42,
+      "nonmanifold_edges": 0
+     }
+    },
+    "max_uv_anisotropy": 1.369,
+    "coplanar_overlaps": {},
+    "ngons": 0,
+    "clear_boxes": {}
+   },
+   "geometry_sha1": {
+    "trampled_log_Bark": "597c18c382e39ea2f9a9ea813f31040bc655b7c2"
+   }
+  }
+ },
+ "checks": {
+  "problems": [],
+  "objects_with_unapplied_transforms": [],
+  "objects_with_modifiers": [],
+  "lowest_point_per_model": {
+   "oni_house_a": -0.2,
+   "oni_house_b": -0.566,
+   "oni_house_c": -0.2,
+   "stake_fence": -1.0,
+   "battle_debris_a": -0.918,
+   "battle_debris_b": -0.95,
+   "torii_broken": -0.628,
+   "trampled_log": -0.311
+  },
+  "fbx_determinism_patch": "patched (stable uids, fixed header date)"
+ },
+ "export_verification": {
+  "oni_house_a": {
+   "objects": [
+    "oni_house_a_Debris",
+    "oni_house_a_Embers",
+    "oni_house_a_Floor",
+    "oni_house_a_Frame",
+    "oni_house_a_Roof",
+    "oni_house_a_Stone",
+    "oni_house_a_Walls"
+   ],
+   "triangles": {
+    "oni_house_a_Debris": 592,
+    "oni_house_a_Embers": 106,
+    "oni_house_a_Floor": 360,
+    "oni_house_a_Frame": 752,
+    "oni_house_a_Roof": 908,
+    "oni_house_a_Stone": 212,
+    "oni_house_a_Walls": 1000
+   },
+   "ngons": 0,
+   "size_studs": [
+    24.68,
+    15.94,
+    21.41
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "oni_house_b": {
+   "objects": [
+    "oni_house_b_Debris",
+    "oni_house_b_Embers",
+    "oni_house_b_Floor",
+    "oni_house_b_Frame",
+    "oni_house_b_Stone",
+    "oni_house_b_Walls"
+   ],
+   "triangles": {
+    "oni_house_b_Debris": 412,
+    "oni_house_b_Embers": 186,
+    "oni_house_b_Floor": 316,
+    "oni_house_b_Frame": 728,
+    "oni_house_b_Stone": 218,
+    "oni_house_b_Walls": 348
+   },
+   "ngons": 0,
+   "size_studs": [
+    20.0,
+    13.73,
+    16.52
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "oni_house_c": {
+   "objects": [
+    "oni_house_c_Debris",
+    "oni_house_c_Embers",
+    "oni_house_c_Floor",
+    "oni_house_c_Frame",
+    "oni_house_c_Roof",
+    "oni_house_c_Stone",
+    "oni_house_c_Walls"
+   ],
+   "triangles": {
+    "oni_house_c_Debris": 328,
+    "oni_house_c_Embers": 116,
+    "oni_house_c_Floor": 304,
+    "oni_house_c_Frame": 764,
+    "oni_house_c_Roof": 912,
+    "oni_house_c_Stone": 228,
+    "oni_house_c_Walls": 932
+   },
+   "ngons": 0,
+   "size_studs": [
+    28.0,
+    15.91,
+    18.53
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "stake_fence": {
+   "objects": [
+    "stake_fence_Rails",
+    "stake_fence_Stakes"
+   ],
+   "triangles": {
+    "stake_fence_Rails": 208,
+    "stake_fence_Stakes": 618
+   },
+   "ngons": 0,
+   "size_studs": [
+    24.0,
+    7.95,
+    4.98
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "battle_debris_a": {
+   "objects": [
+    "battle_debris_a_Cloth",
+    "battle_debris_a_Iron",
+    "battle_debris_a_Wood"
+   ],
+   "triangles": {
+    "battle_debris_a_Cloth": 268,
+    "battle_debris_a_Iron": 104,
+    "battle_debris_a_Wood": 801
+   },
+   "ngons": 0,
+   "size_studs": [
+    8.07,
+    7.88,
+    8.69
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "battle_debris_b": {
+   "objects": [
+    "battle_debris_b_Cloth",
+    "battle_debris_b_Iron",
+    "battle_debris_b_Wood"
+   ],
+   "triangles": {
+    "battle_debris_b_Cloth": 268,
+    "battle_debris_b_Iron": 104,
+    "battle_debris_b_Wood": 825
+   },
+   "ngons": 0,
+   "size_studs": [
+    7.57,
+    4.66,
+    8.68
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "torii_broken": {
+   "objects": [
+    "torii_broken_Embers",
+    "torii_broken_Fallen",
+    "torii_broken_Pillars",
+    "torii_broken_Stone"
+   ],
+   "triangles": {
+    "torii_broken_Embers": 74,
+    "torii_broken_Fallen": 670,
+    "torii_broken_Pillars": 568,
+    "torii_broken_Stone": 124
+   },
+   "ngons": 0,
+   "size_studs": [
+    24.74,
+    19.48,
+    24.97
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "trampled_log": {
+   "objects": [
+    "trampled_log_Bark"
+   ],
+   "triangles": {
+    "trampled_log_Bark": 642
+   },
+   "ngons": 0,
+   "size_studs": [
+    30.47,
+    4.2,
+    5.83
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "one_uv_layer": true,
+   "ok": true
+  },
+  "_glb": {
+   "meshes": [
+    "battle_debris_a_Cloth",
+    "battle_debris_a_Iron",
+    "battle_debris_a_Wood",
+    "battle_debris_b_Cloth",
+    "battle_debris_b_Iron",
+    "battle_debris_b_Wood",
+    "oni_house_a_Debris",
+    "oni_house_a_Embers",
+    "oni_house_a_Floor",
+    "oni_house_a_Frame",
+    "oni_house_a_Roof",
+    "oni_house_a_Stone",
+    "oni_house_a_Walls",
+    "oni_house_b_Debris",
+    "oni_house_b_Embers",
+    "oni_house_b_Floor",
+    "oni_house_b_Frame",
+    "oni_house_b_Stone",
+    "oni_house_b_Walls",
+    "oni_house_c_Debris",
+    "oni_house_c_Embers",
+    "oni_house_c_Floor",
+    "oni_house_c_Frame",
+    "oni_house_c_Roof",
+    "oni_house_c_Stone",
+    "oni_house_c_Walls",
+    "stake_fence_Rails",
+    "stake_fence_Stakes",
+    "torii_broken_Embers",
+    "torii_broken_Fallen",
+    "torii_broken_Pillars",
+    "torii_broken_Stone",
+    "trampled_log_Bark"
+   ],
+   "ok": true
+  }
+ },
+ "renders": {
+  "oni_house_a": [
+   "renders/oni_house_a_front.png",
+   "renders/oni_house_a_back.png",
+   "renders/oni_house_a_left.png",
+   "renders/oni_house_a_right.png",
+   "renders/oni_house_a_three_quarter.png"
+  ],
+  "oni_house_b": [
+   "renders/oni_house_b_front.png",
+   "renders/oni_house_b_back.png",
+   "renders/oni_house_b_left.png",
+   "renders/oni_house_b_right.png",
+   "renders/oni_house_b_three_quarter.png"
+  ],
+  "oni_house_c": [
+   "renders/oni_house_c_front.png",
+   "renders/oni_house_c_back.png",
+   "renders/oni_house_c_left.png",
+   "renders/oni_house_c_right.png",
+   "renders/oni_house_c_three_quarter.png"
+  ],
+  "stake_fence": [
+   "renders/stake_fence_front.png",
+   "renders/stake_fence_back.png",
+   "renders/stake_fence_left.png",
+   "renders/stake_fence_right.png",
+   "renders/stake_fence_three_quarter.png"
+  ],
+  "battle_debris_a": [
+   "renders/battle_debris_a_front.png",
+   "renders/battle_debris_a_back.png",
+   "renders/battle_debris_a_left.png",
+   "renders/battle_debris_a_right.png",
+   "renders/battle_debris_a_three_quarter.png"
+  ],
+  "battle_debris_b": [
+   "renders/battle_debris_b_front.png",
+   "renders/battle_debris_b_back.png",
+   "renders/battle_debris_b_left.png",
+   "renders/battle_debris_b_right.png",
+   "renders/battle_debris_b_three_quarter.png"
+  ],
+  "torii_broken": [
+   "renders/torii_broken_front.png",
+   "renders/torii_broken_back.png",
+   "renders/torii_broken_left.png",
+   "renders/torii_broken_right.png",
+   "renders/torii_broken_three_quarter.png"
+  ],
+  "trampled_log": [
+   "renders/trampled_log_front.png",
+   "renders/trampled_log_back.png",
+   "renders/trampled_log_left.png",
+   "renders/trampled_log_right.png",
+   "renders/trampled_log_three_quarter.png"
+  ],
+  "lineup": [
+   "renders/lineup.png"
+  ],
+  "village_scene": [
+   "renders/village_scene.png",
+   "renders/village_scene_yard.png"
+  ]
+ },
+ "village_scene_layout": [
+  [
+   "torii_broken",
+   [
+    0.0,
+    -34.0,
+    0.0
+   ],
+   0.0
+  ],
+  [
+   "oni_house_c",
+   [
+    -25.0,
+    0.0,
+    0.0
+   ],
+   90.0
+  ],
+  [
+   "oni_house_a",
+   [
+    25.0,
+    2.0,
+    0.0
+   ],
+   -90.0
+  ],
+  [
+   "oni_house_b",
+   [
+    -1.0,
+    26.0,
+    0.0
+   ],
+   0.0
+  ],
+  [
+   "stake_fence",
+   [
+    -20.0,
+    -35.0,
+    0.0
+   ],
+   0.0
+  ],
+  [
+   "stake_fence",
+   [
+    -43.3,
+    -33.0,
+    0.0
+   ],
+   10.0
+  ],
+  [
+   "stake_fence",
+   [
+    20.0,
+    -35.0,
+    0.0
+   ],
+   0.0
+  ],
+  [
+   "stake_fence",
+   [
+    43.3,
+    -33.0,
+    0.0
+   ],
+   -10.0
+  ],
+  [
+   "stake_fence",
+   [
+    -56.5,
+    -15.5,
+    0.0
+   ],
+   76.0
+  ],
+  [
+   "stake_fence",
+   [
+    56.5,
+    -15.5,
+    0.0
+   ],
+   -76.0
+  ],
+  [
+   "stake_fence",
+   [
+    -60.0,
+    8.0,
+    0.0
+   ],
+   90.0
+  ],
+  [
+   "battle_debris_a",
+   [
+    7.0,
+    -50.0,
+    0.0
+   ],
+   20.0
+  ],
+  [
+   "battle_debris_b",
+   [
+    -9.0,
+    -66.0,
+    0.0
+   ],
+   -35.0
+  ],
+  [
+   "trampled_log",
+   [
+    16.0,
+    -74.0,
+    0.0
+   ],
+   64.0
+  ]
+ ]
+}
