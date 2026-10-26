@@ -1,0 +1,1786 @@
+{
+ "batch": "A",
+ "generator": "build.py",
+ "blender": "5.2.3 LTS",
+ "units": "1 Blender unit = 1 stud; scene.unit_settings.scale_length = 0.01; Z up; front = -Y",
+ "size_convention": "[x, height (Blender Z), depth (Blender Y)] in studs, from the mesh bounding box",
+ "atlas": {
+  "file": "atlas.png",
+  "size": [
+   1024,
+   1024
+  ],
+  "tile_px": 256,
+  "inset": 0.04,
+  "tiles": {
+   "leaf_green": {
+    "col": 0,
+    "row_from_top": 0,
+    "kind": "leaf",
+    "base_rgb": [
+     88,
+     132,
+     57
+    ],
+    "mean_rgb": [
+     72.6,
+     108.0,
+     47.6
+    ]
+   },
+   "leaf_dark": {
+    "col": 1,
+    "row_from_top": 0,
+    "kind": "leaf",
+    "base_rgb": [
+     50,
+     88,
+     52
+    ],
+    "mean_rgb": [
+     42.0,
+     72.7,
+     43.7
+    ]
+   },
+   "leaf_yellow_green": {
+    "col": 2,
+    "row_from_top": 0,
+    "kind": "leaf",
+    "base_rgb": [
+     119,
+     152,
+     73
+    ],
+    "mean_rgb": [
+     97.8,
+     124.4,
+     60.6
+    ]
+   },
+   "leaf_jade": {
+    "col": 3,
+    "row_from_top": 0,
+    "kind": "leaf",
+    "base_rgb": [
+     64,
+     138,
+     108
+    ],
+    "mean_rgb": [
+     53.5,
+     113.3,
+     89.1
+    ]
+   },
+   "maple_red": {
+    "col": 0,
+    "row_from_top": 1,
+    "kind": "maple leaf",
+    "base_rgb": [
+     196,
+     58,
+     40
+    ],
+    "mean_rgb": [
+     162.1,
+     48.8,
+     33.9
+    ]
+   },
+   "maple_orange": {
+    "col": 1,
+    "row_from_top": 1,
+    "kind": "maple leaf",
+    "base_rgb": [
+     226,
+     118,
+     44
+    ],
+    "mean_rgb": [
+     187.1,
+     98.2,
+     37.3
+    ]
+   },
+   "maple_amber": {
+    "col": 2,
+    "row_from_top": 1,
+    "kind": "maple leaf",
+    "base_rgb": [
+     232,
+     170,
+     64
+    ],
+    "mean_rgb": [
+     191.4,
+     140.6,
+     53.7
+    ]
+   },
+   "pine_needle": {
+    "col": 3,
+    "row_from_top": 1,
+    "kind": "needle fan",
+    "base_rgb": [
+     46,
+     84,
+     60
+    ],
+    "mean_rgb": [
+     35.2,
+     64.8,
+     46.1
+    ]
+   },
+   "bark": {
+    "col": 0,
+    "row_from_top": 2,
+    "kind": "bark",
+    "base_rgb": [
+     92,
+     65,
+     43
+    ],
+    "mean_rgb": [
+     84.4,
+     59.5,
+     39.2
+    ]
+   },
+   "bark_light": {
+    "col": 1,
+    "row_from_top": 2,
+    "kind": "bark",
+    "base_rgb": [
+     109,
+     77,
+     47
+    ],
+    "mean_rgb": [
+     100.3,
+     70.7,
+     43.0
+    ]
+   },
+   "bark_dark": {
+    "col": 2,
+    "row_from_top": 2,
+    "kind": "bark",
+    "base_rgb": [
+     79,
+     58,
+     40
+    ],
+    "mean_rgb": [
+     73.0,
+     53.4,
+     36.7
+    ]
+   },
+   "charred": {
+    "col": 3,
+    "row_from_top": 2,
+    "kind": "charred bark + ember cracks",
+    "base_rgb": [
+     44,
+     37,
+     32
+    ],
+    "mean_rgb": [
+     58.7,
+     41.7,
+     32.4
+    ]
+   },
+   "far_crown_jura": {
+    "col": 0,
+    "row_from_top": 3,
+    "kind": "flat",
+    "base_rgb": [
+     66,
+     105,
+     60
+    ],
+    "mean_rgb": [
+     65.6,
+     104.7,
+     59.6
+    ]
+   },
+   "far_crown_maple": {
+    "col": 1,
+    "row_from_top": 3,
+    "kind": "flat",
+    "base_rgb": [
+     184,
+     96,
+     38
+    ],
+    "mean_rgb": [
+     183.7,
+     95.6,
+     37.5
+    ]
+   },
+   "far_crown_pine": {
+    "col": 2,
+    "row_from_top": 3,
+    "kind": "flat",
+    "base_rgb": [
+     35,
+     65,
+     46
+    ],
+    "mean_rgb": [
+     34.4,
+     64.4,
+     45.4
+    ]
+   },
+   "far_bark": {
+    "col": 3,
+    "row_from_top": 3,
+    "kind": "flat",
+    "base_rgb": [
+     92,
+     65,
+     43
+    ],
+    "mean_rgb": [
+     91.6,
+     64.6,
+     42.5
+    ]
+   }
+  }
+ },
+ "models": {
+  "maple_a": {
+   "size": [
+    45.24,
+    38.57,
+    39.9
+   ],
+   "bbox_min": [
+    -23.492,
+    -20.492,
+    -0.8
+   ],
+   "bbox_max": [
+    21.745,
+    19.411,
+    37.774
+   ],
+   "kind": "maple",
+   "triangles": {
+    "Bark": 1959,
+    "Leaves": 3148,
+    "total": 5107
+   },
+   "budget": 9000,
+   "objects": {
+    "Bark": "maple_a__Bark",
+    "Leaves": "maple_a__Leaves"
+   },
+   "armature": "maple_a",
+   "bones": [
+    "maple_a_Root",
+    "maple_a_Wind1",
+    "maple_a_Wind2",
+    "maple_a_Wind3",
+    "maple_a_Wind4"
+   ],
+   "colours": {
+    "leaf: maple_orange": [
+     226,
+     118,
+     44
+    ],
+    "leaf: maple_red": [
+     196,
+     58,
+     40
+    ],
+    "bark: bark_dark": [
+     79,
+     58,
+     40
+    ]
+   },
+   "info": {
+    "fork_height": 8.4,
+    "tiers": 3,
+    "pads": 24
+   },
+   "geometry_sha1": {
+    "Bark": "bf507762061c1a3eea2a0526351e077c08e87769",
+    "Leaves": "6e1a2b56c9ef3fa9403ff5de7c3df2a7c9dd7b1f"
+   },
+   "leaf_cards_per_tile": {
+    "maple_red": 657,
+    "maple_orange": 130
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 0.5899,
+     "Wind2": 0.6231,
+     "Wind3": 0.5926,
+     "Wind4": 0.6183
+    },
+    "Leaves": {
+     "Wind1": 0.7928,
+     "Wind2": 0.8001,
+     "Wind3": 0.7784,
+     "Wind4": 0.8733
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 2286,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 39
+   }
+  },
+  "maple_b": {
+   "size": [
+    51.26,
+    41.43,
+    48.31
+   ],
+   "bbox_min": [
+    -24.715,
+    -23.0,
+    -0.8
+   ],
+   "bbox_max": [
+    26.549,
+    25.308,
+    40.63
+   ],
+   "kind": "maple",
+   "triangles": {
+    "Bark": 2250,
+    "Leaves": 3948,
+    "total": 6198
+   },
+   "budget": 9000,
+   "objects": {
+    "Bark": "maple_b__Bark",
+    "Leaves": "maple_b__Leaves"
+   },
+   "armature": "maple_b",
+   "bones": [
+    "maple_b_Root",
+    "maple_b_Wind1",
+    "maple_b_Wind2",
+    "maple_b_Wind3",
+    "maple_b_Wind4"
+   ],
+   "colours": {
+    "leaf: maple_amber": [
+     232,
+     170,
+     64
+    ],
+    "leaf: maple_orange": [
+     226,
+     118,
+     44
+    ],
+    "leaf: maple_red": [
+     196,
+     58,
+     40
+    ],
+    "bark: bark_dark": [
+     79,
+     58,
+     40
+    ]
+   },
+   "info": {
+    "fork_height": 9.24,
+    "tiers": 3,
+    "pads": 27
+   },
+   "geometry_sha1": {
+    "Bark": "7592367fcff807b8b282055aea8d2778e34acb20",
+    "Leaves": "88985210e905aa5ff61ce58554fb5d1177fcf87e"
+   },
+   "leaf_cards_per_tile": {
+    "maple_orange": 776,
+    "maple_amber": 92,
+    "maple_red": 119
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 0.6813,
+     "Wind2": 0.6768,
+     "Wind3": 0.6989,
+     "Wind4": 0.6606
+    },
+    "Leaves": {
+     "Wind1": 1.0705,
+     "Wind2": 0.8556,
+     "Wind3": 0.9307,
+     "Wind4": 0.9401
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 2174,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 39
+   }
+  },
+  "maple_c": {
+   "size": [
+    43.99,
+    35.64,
+    41.35
+   ],
+   "bbox_min": [
+    -21.462,
+    -20.934,
+    -0.8
+   ],
+   "bbox_max": [
+    22.526,
+    20.421,
+    34.845
+   ],
+   "kind": "maple",
+   "triangles": {
+    "Bark": 1700,
+    "Leaves": 2776,
+    "total": 4476
+   },
+   "budget": 9000,
+   "objects": {
+    "Bark": "maple_c__Bark",
+    "Leaves": "maple_c__Leaves"
+   },
+   "armature": "maple_c",
+   "bones": [
+    "maple_c_Root",
+    "maple_c_Wind1",
+    "maple_c_Wind2",
+    "maple_c_Wind3",
+    "maple_c_Wind4"
+   ],
+   "colours": {
+    "leaf: maple_amber": [
+     232,
+     170,
+     64
+    ],
+    "leaf: maple_red": [
+     196,
+     58,
+     40
+    ],
+    "bark: bark_dark": [
+     79,
+     58,
+     40
+    ]
+   },
+   "info": {
+    "fork_height": 8.5,
+    "tiers": 2,
+    "pads": 20
+   },
+   "geometry_sha1": {
+    "Bark": "518cf4131d03c0b844ad6751ff2c1ae7cc0fc5a9",
+    "Leaves": "dccda73eaa5edbba095b5ee501d4f06525ec46af"
+   },
+   "leaf_cards_per_tile": {
+    "maple_red": 120,
+    "maple_amber": 574
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 0.5623,
+     "Wind2": 0.5888,
+     "Wind3": 0.5932,
+     "Wind4": 0.556
+    },
+    "Leaves": {
+     "Wind1": 0.8249,
+     "Wind2": 0.8097,
+     "Wind3": 0.8155,
+     "Wind4": 0.8484
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 2154,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 33
+   }
+  },
+  "pine_a": {
+   "size": [
+    23.33,
+    60.9,
+    22.11
+   ],
+   "bbox_min": [
+    -11.05,
+    -10.156,
+    -0.8
+   ],
+   "bbox_max": [
+    12.28,
+    11.958,
+    60.103
+   ],
+   "kind": "pine",
+   "triangles": {
+    "Bark": 2019,
+    "Leaves": 3020,
+    "total": 5039
+   },
+   "budget": 9000,
+   "objects": {
+    "Bark": "pine_a__Bark",
+    "Leaves": "pine_a__Leaves"
+   },
+   "armature": "pine_a",
+   "bones": [
+    "pine_a_Root",
+    "pine_a_Wind1",
+    "pine_a_Wind2",
+    "pine_a_Wind3",
+    "pine_a_Wind4"
+   ],
+   "colours": {
+    "leaf: pine_needle": [
+     46,
+     84,
+     60
+    ],
+    "bark: bark": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "tiers": 8,
+    "branches": 46,
+    "first_tier_height": 24.1,
+    "lowest_needles": 14.47,
+    "bare_trunk_fraction": 0.241
+   },
+   "geometry_sha1": {
+    "Bark": "e59f3c6c3d6c7f2c37c0e16d6b9df4f9b9098a88",
+    "Leaves": "5c50aae44ac5dd9fd19504316cc6390a34316ab7"
+   },
+   "leaf_cards_per_tile": {
+    "pine_needle": 755
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 0.9172,
+     "Wind2": 0.9181,
+     "Wind3": 1.1295,
+     "Wind4": 0.918
+    },
+    "Leaves": {
+     "Wind1": 1.0365,
+     "Wind2": 1.0435,
+     "Wind3": 1.2742,
+     "Wind4": 1.0291
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 1849,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 53
+   }
+  },
+  "pine_b": {
+   "size": [
+    27.44,
+    80.9,
+    27.08
+   ],
+   "bbox_min": [
+    -14.346,
+    -12.531,
+    -0.8
+   ],
+   "bbox_max": [
+    13.09,
+    14.545,
+    80.103
+   ],
+   "kind": "pine",
+   "triangles": {
+    "Bark": 2348,
+    "Leaves": 4112,
+    "total": 6460
+   },
+   "budget": 9000,
+   "objects": {
+    "Bark": "pine_b__Bark",
+    "Leaves": "pine_b__Leaves"
+   },
+   "armature": "pine_b",
+   "bones": [
+    "pine_b_Root",
+    "pine_b_Wind1",
+    "pine_b_Wind2",
+    "pine_b_Wind3",
+    "pine_b_Wind4"
+   ],
+   "colours": {
+    "leaf: pine_needle": [
+     46,
+     84,
+     60
+    ],
+    "bark: bark": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "tiers": 9,
+    "branches": 51,
+    "first_tier_height": 30.25,
+    "lowest_needles": 18.79,
+    "bare_trunk_fraction": 0.235
+   },
+   "geometry_sha1": {
+    "Bark": "64396860b55228eed13e2d773e59559e8afe5fa0",
+    "Leaves": "7c5c211665a20bdae31d0b31185e888cd510be5c"
+   },
+   "leaf_cards_per_tile": {
+    "pine_needle": 1028
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 1.2232,
+     "Wind2": 1.2235,
+     "Wind3": 1.2289,
+     "Wind4": 1.5344
+    },
+    "Leaves": {
+     "Wind1": 1.3887,
+     "Wind2": 1.3742,
+     "Wind3": 1.3819,
+     "Wind4": 1.698
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 1778,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 52
+   }
+  },
+  "burnt_tree": {
+   "size": [
+    14.5,
+    30.72,
+    17.04
+   ],
+   "bbox_min": [
+    -7.542,
+    -7.459,
+    -0.8
+   ],
+   "bbox_max": [
+    6.957,
+    9.582,
+    29.917
+   ],
+   "kind": "dead tree",
+   "triangles": {
+    "Bark": 704,
+    "total": 704
+   },
+   "budget": 9000,
+   "objects": {
+    "Bark": "burnt_tree__Bark"
+   },
+   "armature": "burnt_tree",
+   "bones": [
+    "burnt_tree_Root",
+    "burnt_tree_Wind1",
+    "burnt_tree_Wind2",
+    "burnt_tree_Wind3",
+    "burnt_tree_Wind4"
+   ],
+   "colours": {
+    "bark: charred": [
+     44,
+     37,
+     32
+    ],
+    "ember cracks": [
+     196,
+     84,
+     32
+    ]
+   },
+   "info": {
+    "broken_top_base": 24.4,
+    "branches": 4,
+    "offshoots": 2
+   },
+   "geometry_sha1": {
+    "Bark": "e6fa94e118b5ef94be61f8bb96aadb370f8c6c73"
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 0.0,
+     "Wind2": 0.0,
+     "Wind3": 0.0,
+     "Wind4": 0.0
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 1057,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 0
+   }
+  },
+  "dryas_tree": {
+   "size": [
+    119.97,
+    109.79,
+    117.95
+   ],
+   "bbox_min": [
+    -58.514,
+    -59.353,
+    -1.0
+   ],
+   "bbox_max": [
+    61.451,
+    58.599,
+    108.787
+   ],
+   "kind": "landmark tree",
+   "triangles": {
+    "Bark": 4434,
+    "Leaves": 6964,
+    "Glow": 480,
+    "total": 11878
+   },
+   "budget": 12000,
+   "objects": {
+    "Bark": "dryas_tree__Bark",
+    "Leaves": "dryas_tree__Leaves",
+    "Glow": "dryas_tree__Glow"
+   },
+   "armature": "dryas_tree",
+   "bones": [
+    "dryas_tree_Root",
+    "dryas_tree_Wind1",
+    "dryas_tree_Wind2",
+    "dryas_tree_Wind3",
+    "dryas_tree_Wind4"
+   ],
+   "colours": {
+    "leaf: leaf_green": [
+     88,
+     132,
+     57
+    ],
+    "leaf: leaf_jade": [
+     64,
+     138,
+     108
+    ],
+    "bark: bark": [
+     92,
+     65,
+     43
+    ],
+    "roots: bark_light": [
+     109,
+     77,
+     47
+    ],
+    "spirit fruit (material Glow, not in atlas)": [
+     120,
+     230,
+     235
+    ]
+   },
+   "info": {
+    "split_height": 36.0,
+    "limbs": 3,
+    "roots": 7,
+    "arch_roots": 4,
+    "clusters": 39,
+    "fruit": 10,
+    "arch_clearance": [
+     {
+      "azimuth_deg": 100.8,
+      "human_radius": 18.21,
+      "lateral_offset": [
+       -0.888,
+       0.054,
+       0.0
+      ],
+      "underside_at_human": 12.19,
+      "max_underside": 13.25,
+      "walkable_span_ge7": [
+       9.3,
+       27.1
+      ],
+      "span_len": 17.8
+     },
+     {
+      "azimuth_deg": 203.1,
+      "human_radius": 19.41,
+      "lateral_offset": [
+       -0.193,
+       0.513,
+       0.0
+      ],
+      "underside_at_human": 12.34,
+      "max_underside": 13.25,
+      "walkable_span_ge7": [
+       9.3,
+       29.5
+      ],
+      "span_len": 20.1
+     },
+     {
+      "azimuth_deg": 306.3,
+      "human_radius": 18.41,
+      "lateral_offset": [
+       0.527,
+       0.113,
+       0.0
+      ],
+      "underside_at_human": 12.19,
+      "max_underside": 13.25,
+      "walkable_span_ge7": [
+       9.4,
+       27.4
+      ],
+      "span_len": 18.0
+     },
+     {
+      "azimuth_deg": 45.9,
+      "human_radius": 18.92,
+      "lateral_offset": [
+       0.666,
+       -0.668,
+       0.0
+      ],
+      "underside_at_human": 12.34,
+      "max_underside": 13.25,
+      "walkable_span_ge7": [
+       9.1,
+       28.7
+      ],
+      "span_len": 19.6
+     }
+    ]
+   },
+   "geometry_sha1": {
+    "Bark": "d5a2fab2b80d3fa441cdd26d7e6c45d6072d4c03",
+    "Leaves": "8ed0275486b10acca2e44fa8f84e904229bf298c",
+    "Glow": "9f37576a07e053b38873a355cc18a64173f7f208"
+   },
+   "leaf_cards_per_tile": {
+    "leaf_jade": 945,
+    "leaf_green": 796
+   },
+   "wind_test_max_move_studs": {
+    "Bark": {
+     "Wind1": 1.9122,
+     "Wind2": 1.7435,
+     "Wind3": 1.7752,
+     "Wind4": 1.9501
+    },
+    "Leaves": {
+     "Wind1": 2.5421,
+     "Wind2": 2.3158,
+     "Wind3": 2.3215,
+     "Wind4": 2.5165
+    },
+    "Glow": {
+     "Wind1": 0.8899,
+     "Wind2": 1.4305,
+     "Wind3": 0.7987,
+     "Wind4": 2.164
+    }
+   },
+   "facing_check": {
+    "rays": 4000,
+    "hits": 1919,
+    "backfacing_first_hits": 0,
+    "card_edge_slivers": 17
+   }
+  },
+  "far_jura_broad": {
+   "size": [
+    54.0,
+    56.0,
+    55.0
+   ],
+   "bbox_min": [
+    -27.0,
+    -27.5,
+    0.0
+   ],
+   "bbox_max": [
+    27.0,
+    27.5,
+    56.0
+   ],
+   "kind": "far_card",
+   "triangles": {
+    "Card": 138,
+    "total": 138
+   },
+   "budget": 150,
+   "objects": {
+    "Card": "far_jura_broad__Card"
+   },
+   "armature": null,
+   "bones": [],
+   "colours": {
+    "crown (far_crown_jura)": [
+     66,
+     105,
+     60
+    ],
+    "trunk (far_bark = bark)": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "source": "existing Jura tree 'broad crown' 54x56x55",
+    "crown_tile": "far_crown_jura",
+    "trunk_xy": [
+     0.0,
+     0.0
+    ],
+    "crown_bottom_fraction": 0.3
+   },
+   "geometry_sha1": {
+    "Card": "4af8675d3523692119c8d3ace2ecab74a31ca951"
+   }
+  },
+  "far_jura_tall": {
+   "size": [
+    36.0,
+    75.0,
+    33.0
+   ],
+   "bbox_min": [
+    -18.0,
+    -16.5,
+    0.0
+   ],
+   "bbox_max": [
+    18.0,
+    16.5,
+    75.0
+   ],
+   "kind": "far_card",
+   "triangles": {
+    "Card": 138,
+    "total": 138
+   },
+   "budget": 150,
+   "objects": {
+    "Card": "far_jura_tall__Card"
+   },
+   "armature": null,
+   "bones": [],
+   "colours": {
+    "crown (far_crown_jura)": [
+     66,
+     105,
+     60
+    ],
+    "trunk (far_bark = bark)": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "source": "existing Jura tree 'tall' 36x75x33",
+    "crown_tile": "far_crown_jura",
+    "trunk_xy": [
+     0.0,
+     0.0
+    ],
+    "crown_bottom_fraction": 0.24
+   },
+   "geometry_sha1": {
+    "Card": "e81ee527d6e82345952baa798e5391bea4d85a2e"
+   }
+  },
+  "far_jura_young": {
+   "size": [
+    35.0,
+    37.0,
+    34.0
+   ],
+   "bbox_min": [
+    -17.5,
+    -17.0,
+    0.0
+   ],
+   "bbox_max": [
+    17.5,
+    17.0,
+    37.0
+   ],
+   "kind": "far_card",
+   "triangles": {
+    "Card": 138,
+    "total": 138
+   },
+   "budget": 150,
+   "objects": {
+    "Card": "far_jura_young__Card"
+   },
+   "armature": null,
+   "bones": [],
+   "colours": {
+    "crown (far_crown_jura)": [
+     66,
+     105,
+     60
+    ],
+    "trunk (far_bark = bark)": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "source": "existing Jura tree 'young' 35x37x34",
+    "crown_tile": "far_crown_jura",
+    "trunk_xy": [
+     0.0,
+     0.0
+    ],
+    "crown_bottom_fraction": 0.34
+   },
+   "geometry_sha1": {
+    "Card": "bf38e2ade6dfbbb2fe108b2b9fdfde56f27786ad"
+   }
+  },
+  "far_jura_ancient": {
+   "size": [
+    72.0,
+    65.0,
+    73.0
+   ],
+   "bbox_min": [
+    -36.0,
+    -36.5,
+    0.0
+   ],
+   "bbox_max": [
+    36.0,
+    36.5,
+    65.0
+   ],
+   "kind": "far_card",
+   "triangles": {
+    "Card": 138,
+    "total": 138
+   },
+   "budget": 150,
+   "objects": {
+    "Card": "far_jura_ancient__Card"
+   },
+   "armature": null,
+   "bones": [],
+   "colours": {
+    "crown (far_crown_jura)": [
+     66,
+     105,
+     60
+    ],
+    "trunk (far_bark = bark)": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "source": "existing Jura tree 'ancient' 72x65x73",
+    "crown_tile": "far_crown_jura",
+    "trunk_xy": [
+     0.0,
+     0.0
+    ],
+    "crown_bottom_fraction": 0.3
+   },
+   "geometry_sha1": {
+    "Card": "31e268f7588445725808cf42c43e12181ceb246c"
+   }
+  },
+  "far_maple": {
+   "size": [
+    51.26,
+    41.43,
+    48.31
+   ],
+   "bbox_min": [
+    -24.715,
+    -23.0,
+    -0.8
+   ],
+   "bbox_max": [
+    26.549,
+    25.308,
+    40.63
+   ],
+   "kind": "far_card",
+   "triangles": {
+    "Card": 138,
+    "total": 138
+   },
+   "budget": 150,
+   "objects": {
+    "Card": "far_maple__Card"
+   },
+   "armature": null,
+   "bones": [],
+   "colours": {
+    "crown (far_crown_maple)": [
+     184,
+     96,
+     38
+    ],
+    "trunk (far_bark = bark)": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "source": "maple_b (exact bbox of the full tree)",
+    "crown_tile": "far_crown_maple",
+    "trunk_xy": [
+     0.0,
+     0.0
+    ],
+    "crown_bottom_fraction": 0.359
+   },
+   "geometry_sha1": {
+    "Card": "87f09c76394a5e726c86ac51a3986074b56b61a2"
+   }
+  },
+  "far_pine": {
+   "size": [
+    27.44,
+    80.9,
+    27.08
+   ],
+   "bbox_min": [
+    -14.346,
+    -12.531,
+    -0.8
+   ],
+   "bbox_max": [
+    13.09,
+    14.545,
+    80.103
+   ],
+   "kind": "far_card",
+   "triangles": {
+    "Card": 138,
+    "total": 138
+   },
+   "budget": 150,
+   "objects": {
+    "Card": "far_pine__Card"
+   },
+   "armature": null,
+   "bones": [],
+   "colours": {
+    "crown (far_crown_pine)": [
+     35,
+     65,
+     46
+    ],
+    "trunk (far_bark = bark)": [
+     92,
+     65,
+     43
+    ]
+   },
+   "info": {
+    "source": "pine_b (exact bbox of the full tree)",
+    "crown_tile": "far_crown_pine",
+    "trunk_xy": [
+     0.0,
+     0.0
+    ],
+    "crown_bottom_fraction": 0.242
+   },
+   "geometry_sha1": {
+    "Card": "3350b6af4549d9e9a9ed87256ea9941e17570ed4"
+   }
+  }
+ },
+ "checks": {
+  "budget_problems": [],
+  "objects_with_unapplied_transforms": [],
+  "lowest_point_per_model": {
+   "maple_a": -0.8,
+   "maple_b": -0.8,
+   "maple_c": -0.8,
+   "pine_a": -0.8,
+   "pine_b": -0.8,
+   "burnt_tree": -0.8,
+   "dryas_tree": -1.0,
+   "far_jura_broad": 0.0,
+   "far_jura_tall": 0.0,
+   "far_jura_young": 0.0,
+   "far_jura_ancient": 0.0,
+   "far_maple": -0.8,
+   "far_pine": -0.8
+  },
+  "sink_ok_(-1..0)": true,
+  "modifiers_other_than_armature": [],
+  "dryas_fruit_to_nearest_leaf_vertex": [
+   1.58,
+   1.08,
+   1.37,
+   1.7,
+   1.37,
+   3.33,
+   0.86,
+   0.9,
+   2.06,
+   1.8
+  ],
+  "pine_bare_trunk_fraction": {
+   "pine_a": 0.241,
+   "pine_b": 0.235
+  },
+  "fbx_determinism_patch": "patched (stable uids, fixed header date)"
+ },
+ "export_verification": {
+  "maple_a": {
+   "objects": [
+    "maple_a",
+    "maple_a__Bark",
+    "maple_a__Leaves"
+   ],
+   "bones": [
+    "maple_a_Root",
+    "maple_a_Wind1",
+    "maple_a_Wind2",
+    "maple_a_Wind3",
+    "maple_a_Wind4"
+   ],
+   "vertex_groups": [
+    "maple_a_Root",
+    "maple_a_Wind1",
+    "maple_a_Wind2",
+    "maple_a_Wind3",
+    "maple_a_Wind4"
+   ],
+   "triangles": {
+    "maple_a__Bark": 1959,
+    "maple_a__Leaves": 3148
+   },
+   "ngons": 0,
+   "size_studs": [
+    45.24,
+    38.57,
+    39.9
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "maple_b": {
+   "objects": [
+    "maple_b",
+    "maple_b__Bark",
+    "maple_b__Leaves"
+   ],
+   "bones": [
+    "maple_b_Root",
+    "maple_b_Wind1",
+    "maple_b_Wind2",
+    "maple_b_Wind3",
+    "maple_b_Wind4"
+   ],
+   "vertex_groups": [
+    "maple_b_Root",
+    "maple_b_Wind1",
+    "maple_b_Wind2",
+    "maple_b_Wind3",
+    "maple_b_Wind4"
+   ],
+   "triangles": {
+    "maple_b__Bark": 2250,
+    "maple_b__Leaves": 3948
+   },
+   "ngons": 0,
+   "size_studs": [
+    51.26,
+    41.43,
+    48.31
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "maple_c": {
+   "objects": [
+    "maple_c",
+    "maple_c__Bark",
+    "maple_c__Leaves"
+   ],
+   "bones": [
+    "maple_c_Root",
+    "maple_c_Wind1",
+    "maple_c_Wind2",
+    "maple_c_Wind3",
+    "maple_c_Wind4"
+   ],
+   "vertex_groups": [
+    "maple_c_Root",
+    "maple_c_Wind1",
+    "maple_c_Wind2",
+    "maple_c_Wind3",
+    "maple_c_Wind4"
+   ],
+   "triangles": {
+    "maple_c__Bark": 1700,
+    "maple_c__Leaves": 2776
+   },
+   "ngons": 0,
+   "size_studs": [
+    43.99,
+    35.64,
+    41.35
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "pine_a": {
+   "objects": [
+    "pine_a",
+    "pine_a__Bark",
+    "pine_a__Leaves"
+   ],
+   "bones": [
+    "pine_a_Root",
+    "pine_a_Wind1",
+    "pine_a_Wind2",
+    "pine_a_Wind3",
+    "pine_a_Wind4"
+   ],
+   "vertex_groups": [
+    "pine_a_Root",
+    "pine_a_Wind1",
+    "pine_a_Wind2",
+    "pine_a_Wind3",
+    "pine_a_Wind4"
+   ],
+   "triangles": {
+    "pine_a__Bark": 2019,
+    "pine_a__Leaves": 3020
+   },
+   "ngons": 0,
+   "size_studs": [
+    23.33,
+    60.9,
+    22.11
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "pine_b": {
+   "objects": [
+    "pine_b",
+    "pine_b__Bark",
+    "pine_b__Leaves"
+   ],
+   "bones": [
+    "pine_b_Root",
+    "pine_b_Wind1",
+    "pine_b_Wind2",
+    "pine_b_Wind3",
+    "pine_b_Wind4"
+   ],
+   "vertex_groups": [
+    "pine_b_Root",
+    "pine_b_Wind1",
+    "pine_b_Wind2",
+    "pine_b_Wind3",
+    "pine_b_Wind4"
+   ],
+   "triangles": {
+    "pine_b__Bark": 2348,
+    "pine_b__Leaves": 4112
+   },
+   "ngons": 0,
+   "size_studs": [
+    27.44,
+    80.9,
+    27.08
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "burnt_tree": {
+   "objects": [
+    "burnt_tree",
+    "burnt_tree__Bark"
+   ],
+   "bones": [
+    "burnt_tree_Root",
+    "burnt_tree_Wind1",
+    "burnt_tree_Wind2",
+    "burnt_tree_Wind3",
+    "burnt_tree_Wind4"
+   ],
+   "vertex_groups": [
+    "burnt_tree_Root"
+   ],
+   "triangles": {
+    "burnt_tree__Bark": 704
+   },
+   "ngons": 0,
+   "size_studs": [
+    14.5,
+    30.72,
+    17.04
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "dryas_tree": {
+   "objects": [
+    "dryas_tree",
+    "dryas_tree__Bark",
+    "dryas_tree__Glow",
+    "dryas_tree__Leaves"
+   ],
+   "bones": [
+    "dryas_tree_Root",
+    "dryas_tree_Wind1",
+    "dryas_tree_Wind2",
+    "dryas_tree_Wind3",
+    "dryas_tree_Wind4"
+   ],
+   "vertex_groups": [
+    "dryas_tree_Root",
+    "dryas_tree_Wind1",
+    "dryas_tree_Wind2",
+    "dryas_tree_Wind3",
+    "dryas_tree_Wind4"
+   ],
+   "triangles": {
+    "dryas_tree__Bark": 4434,
+    "dryas_tree__Glow": 480,
+    "dryas_tree__Leaves": 6964
+   },
+   "ngons": 0,
+   "size_studs": [
+    119.97,
+    109.79,
+    117.95
+   ],
+   "materials": [
+    "Atlas",
+    "Glow"
+   ],
+   "ok": true
+  },
+  "far_jura_broad": {
+   "objects": [
+    "far_jura_broad__Card"
+   ],
+   "bones": [],
+   "vertex_groups": [],
+   "triangles": {
+    "far_jura_broad__Card": 138
+   },
+   "ngons": 0,
+   "size_studs": [
+    54.0,
+    56.0,
+    55.0
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "far_jura_tall": {
+   "objects": [
+    "far_jura_tall__Card"
+   ],
+   "bones": [],
+   "vertex_groups": [],
+   "triangles": {
+    "far_jura_tall__Card": 138
+   },
+   "ngons": 0,
+   "size_studs": [
+    36.0,
+    75.0,
+    33.0
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "far_jura_young": {
+   "objects": [
+    "far_jura_young__Card"
+   ],
+   "bones": [],
+   "vertex_groups": [],
+   "triangles": {
+    "far_jura_young__Card": 138
+   },
+   "ngons": 0,
+   "size_studs": [
+    35.0,
+    37.0,
+    34.0
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "far_jura_ancient": {
+   "objects": [
+    "far_jura_ancient__Card"
+   ],
+   "bones": [],
+   "vertex_groups": [],
+   "triangles": {
+    "far_jura_ancient__Card": 138
+   },
+   "ngons": 0,
+   "size_studs": [
+    72.0,
+    65.0,
+    73.0
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "far_maple": {
+   "objects": [
+    "far_maple__Card"
+   ],
+   "bones": [],
+   "vertex_groups": [],
+   "triangles": {
+    "far_maple__Card": 138
+   },
+   "ngons": 0,
+   "size_studs": [
+    51.26,
+    41.43,
+    48.31
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "far_pine": {
+   "objects": [
+    "far_pine__Card"
+   ],
+   "bones": [],
+   "vertex_groups": [],
+   "triangles": {
+    "far_pine__Card": 138
+   },
+   "ngons": 0,
+   "size_studs": [
+    27.44,
+    80.9,
+    27.08
+   ],
+   "materials": [
+    "Atlas"
+   ],
+   "ok": true
+  },
+  "_glb": {
+   "meshes": [
+    "burnt_tree__Bark",
+    "dryas_tree__Bark",
+    "dryas_tree__Glow",
+    "dryas_tree__Leaves",
+    "far_jura_ancient__Card",
+    "far_jura_broad__Card",
+    "far_jura_tall__Card",
+    "far_jura_young__Card",
+    "far_maple__Card",
+    "far_pine__Card",
+    "maple_a__Bark",
+    "maple_a__Leaves",
+    "maple_b__Bark",
+    "maple_b__Leaves",
+    "maple_c__Bark",
+    "maple_c__Leaves",
+    "pine_a__Bark",
+    "pine_a__Leaves",
+    "pine_b__Bark",
+    "pine_b__Leaves"
+   ],
+   "armatures": [
+    "burnt_tree",
+    "dryas_tree",
+    "maple_a",
+    "maple_b",
+    "maple_c",
+    "pine_a",
+    "pine_b"
+   ],
+   "dryas_bark_size": [
+    96.21,
+    96.26,
+    100.88
+   ]
+  }
+ },
+ "renders": {
+  "maple_a": [
+   "renders/maple_a_front.png",
+   "renders/maple_a_back.png",
+   "renders/maple_a_left.png",
+   "renders/maple_a_right.png",
+   "renders/maple_a_three_quarter.png"
+  ],
+  "maple_b": [
+   "renders/maple_b_front.png",
+   "renders/maple_b_back.png",
+   "renders/maple_b_left.png",
+   "renders/maple_b_right.png",
+   "renders/maple_b_three_quarter.png"
+  ],
+  "maple_c": [
+   "renders/maple_c_front.png",
+   "renders/maple_c_back.png",
+   "renders/maple_c_left.png",
+   "renders/maple_c_right.png",
+   "renders/maple_c_three_quarter.png"
+  ],
+  "pine_a": [
+   "renders/pine_a_front.png",
+   "renders/pine_a_back.png",
+   "renders/pine_a_left.png",
+   "renders/pine_a_right.png",
+   "renders/pine_a_three_quarter.png"
+  ],
+  "pine_b": [
+   "renders/pine_b_front.png",
+   "renders/pine_b_back.png",
+   "renders/pine_b_left.png",
+   "renders/pine_b_right.png",
+   "renders/pine_b_three_quarter.png"
+  ],
+  "burnt_tree": [
+   "renders/burnt_tree_front.png",
+   "renders/burnt_tree_back.png",
+   "renders/burnt_tree_left.png",
+   "renders/burnt_tree_right.png",
+   "renders/burnt_tree_three_quarter.png"
+  ],
+  "dryas_tree": [
+   "renders/dryas_tree_front.png",
+   "renders/dryas_tree_back.png",
+   "renders/dryas_tree_left.png",
+   "renders/dryas_tree_right.png",
+   "renders/dryas_tree_three_quarter.png"
+  ],
+  "far_jura_broad": [
+   "renders/far_jura_broad_front.png",
+   "renders/far_jura_broad_back.png",
+   "renders/far_jura_broad_left.png",
+   "renders/far_jura_broad_right.png",
+   "renders/far_jura_broad_three_quarter.png"
+  ],
+  "far_jura_tall": [
+   "renders/far_jura_tall_front.png",
+   "renders/far_jura_tall_back.png",
+   "renders/far_jura_tall_left.png",
+   "renders/far_jura_tall_right.png",
+   "renders/far_jura_tall_three_quarter.png"
+  ],
+  "far_jura_young": [
+   "renders/far_jura_young_front.png",
+   "renders/far_jura_young_back.png",
+   "renders/far_jura_young_left.png",
+   "renders/far_jura_young_right.png",
+   "renders/far_jura_young_three_quarter.png"
+  ],
+  "far_jura_ancient": [
+   "renders/far_jura_ancient_front.png",
+   "renders/far_jura_ancient_back.png",
+   "renders/far_jura_ancient_left.png",
+   "renders/far_jura_ancient_right.png",
+   "renders/far_jura_ancient_three_quarter.png"
+  ],
+  "far_maple": [
+   "renders/far_maple_front.png",
+   "renders/far_maple_back.png",
+   "renders/far_maple_left.png",
+   "renders/far_maple_right.png",
+   "renders/far_maple_three_quarter.png"
+  ],
+  "far_pine": [
+   "renders/far_pine_front.png",
+   "renders/far_pine_back.png",
+   "renders/far_pine_left.png",
+   "renders/far_pine_right.png",
+   "renders/far_pine_three_quarter.png"
+  ],
+  "dryas_arch_walkthrough": [
+   "renders/dryas_tree_arch_walkthrough.png"
+  ],
+  "far_compare": [
+   "renders/far_compare_far_jura_broad_1500.png",
+   "renders/far_compare_far_jura_tall_1500.png",
+   "renders/far_compare_far_jura_young_1500.png",
+   "renders/far_compare_far_jura_ancient_1500.png",
+   "renders/far_compare_far_maple_1500.png",
+   "renders/far_compare_far_pine_1500.png"
+  ]
+ }
+}
